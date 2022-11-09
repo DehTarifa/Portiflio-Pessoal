@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portifólio</title>
+
+    <!-- URL FONT 
+    font-family: 'Montserrat', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER MENU ------------------------------------------>
+    <header>
+      <div class="dropdown" onclick="activeMenu()">
+        <input type="text" id="input-menu" readonly placeholder="Selecione" />
+
+        <div class="menu-option">
+          <ul>
+            <li>
+              <a href="#about-me" onmousemove="show('Sobre Mim')">Sobre Mim</a>
+              <a
+                href="#experience"
+                onmousemove="show('Expêriencia Profissional')"
+                >Expêriencia Profissional</a
+              >
+              <a href="#academic" onmousemove="show('Formação Academico')"
+                >Formação Acadêmica</a
+              >
+              <a href="#project" onmousemove="show('Projetos Pessoais')"
+                >Projetos Pessoais</a
+              >
+              <a href="#contact" onmousemove="show('Contato Pessoal')"
+                >Contato Pessoal</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- SECTION ABOUT-ME ------------------------------------------>
+      <section id="about-me">
+        <div id="aboutme-img"></div>
+
+        <div id="aboutme-text">
+          <h2>Sobre mim</h2>
+          <h3>Carta de apresentação</h3>
+          <p>
+            Olá, meu nome é Denner Tarifa Ribeiro, tenho 23 anos, sou estudante
+            do curso de Análise e Desenvolvimento de sistemas, onde procuro
+            oportunidades para iniciar a minha carreira profissional na área de
+            TI, afim de aprender e desenvolver minhas habilidades profissionais
+            e pessoais. Estou me desenvolvendo nas linguagens JavaScript,
+            nodejs, sql, mas sou flexível para aprender outras, trabalho bem em
+            equipe e sempre busco por melhores resultados.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION EXPERIENCE ------------------------------------------>
+
+      <section id="experience">
+        <h2 class="section-title">Expêrencia Profissional</h2>
+
+        <div class="container-card">
+          <h2>Auxiliar de almoxarifado</h2>
+          <h3>
+            Maferita Cosméticos LTDA | Guarulhos - SP | 02/2021 - 10/2022.
+          </h3>
+          <p>
+            <strong>Atividades exercidas:</strong> Auxiliar a produção a atingir
+            os resultados esperados como metas estabelecidas, além disso
+            prevenir o desperdício de produto e insumos, sempre presando pelo
+            melhor resulto possível. Gerenciar o estoque de modo que fique
+            sempre organizado, sempre alimentando as linhas de produção.
+            Realizar carga e descarga de produtos acabados, recebimento de
+            matéria prima.
+          </p>
+          <p>
+            <strong>Cargos:</strong> Alimentador de linha de produção / Auxiliar
+            de almoxarifado.
+          </p>
+        </div>
+
+        <div class="container-card">
+          <h2>Auxiliar de pintura e acabamento</h2>
+          <h3>Autônomo | Maria da fé - MG | 01/2018 - 10/2020</h3>
+          <p>
+            <strong>Atividades exercidas:</strong> Auxiliar a produção a atingir
+            os resultados esperados como metas estabelecidas, além disso
+            prevenir o desperdício de produto e insumos, sempre presando pelo
+            melhor resulto possível. Gerenciar o estoque de modo que fique
+            sempre organizado, sempre alimentando as linhas de produção.
+            Realizar carga e descarga de produtos acabados, recebimento de
+            matéria prima.
+          </p>
+          <p>
+            <strong>Cargos:</strong> Auxiliar de pintura / Responsável Técnico
+          </p>
+        </div>
+
+        <div class="container-card">
+          <h2>Auxiliar de produção</h2>
+          <h3>
+            MEI Oficina de tiaras femininas | Poá - SP | 03/2016 - 04/2017
+          </h3>
+          <p>
+            <strong>Atividades exercidas:</strong> Auxiliar no acabamento de
+            tiaras femininas, controlar o estoque de materiais para que não
+            falte material para a finalização das tiaras, auxiliar na entrega e
+            descarregamento de produtos acabados e semiacabados.
+          </p>
+          <p><strong>Cargos:</strong> Auxiliar Geral</p>
+        </div>
+      </section>
+
+      <!-- SECTION ACADEMIC ------------------------------------------>
+      <section id="academic">
+        <h2 class="section-title">Formação academica</h2>
+
+        <div class="container-card card-superior">
+          <h2>Análise e desenvolvendo de sistemas</h2>
+          <h3>
+            Ensino Superior | 11/2021 - 11/2023 Cursando | Eniac, Guarulhos - SP
+          </h3>
+          <ul>
+            <li>Desenvolvimento de software</li>
+            <li>Linguagens de programação</li>
+            <li>Ferramentas de edição para criação de projetos</li>
+            <li>Controle e gerenciamento de projetos</li>
+          </ul>
+        </div>
+
+        <div class="container-card card-curso">
+          <h2>Segurança do trabalho</h2>
+          <h3>
+            Competência Transversal 14horas | 06/2021 - 07/2021 | Senai, São
+            Paulo
+          </h3>
+          <ul>
+            <li>Conceitos e Principais acidente de Trabalho</li>
+            <li>Uma História sobre EPI e EPC</li>
+            <li>Causas mais comuns dos acidentes de trabalho</li>
+            <li>CIPA & Mapa de Risco</li>
+          </ul>
+        </div>
+
+        <div class="container-card card-curso">
+          <h2>Fundamentos da Logística</h2>
+          <h3>
+            Competência Transversal 14horas | 06/2021 - 06/2021 | Senai, São
+            Paulo
+          </h3>
+          <ul>
+            <li>Modalidades de Transporte</li>
+            <li>Sistemas de Transporte</li>
+            <li>Gestão da Qualidade</li>
+            <li>Modal Rodoviário, Ferroviário, Aquaviário, Dutoviário</li>
+          </ul>
+        </div>
+
+        <div class="container-card card-cursoJS">
+          <h2>Módulo Básico JavaScript</h2>
+          <h3>
+            Módulo Básico 40Horas | 05/2022 - 06/2022 | Curso em vídeo, Rio de
+            Janeiro
+          </h3>
+          <ul>
+            <li>Comando Básicos em JavaScript</li>
+            <li>Repetições em JavaScript</li>
+            <li>Condições em JavaScript</li>
+            <li>Entendendo o DOM</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION PROJECT ------------------------------------------>
+      <section id="project">
+        <h2 class="section-title">Projetos Pessoais</h2>
+
+        <div data-slide="slide" class="slide">
+          <div class="slide-items">
+            <div class="container-slide">
+              <img src="./img/PRO1.png" alt="Img 1" />
+              <h2>Controle de estoque - Projeto Pessoal</h2>
+              <p>
+                Desenvolver um programa que o usuário pudesse cadastrar seus
+                produtos, e ao mesmo tempo conferi los, utilizando HTML& CSS e
+                JavaScript
+              </p>
+            </div>
+
+            <div class="container-slide">
+              <img src="./img/PRO2.png" alt="Img 1" />
+              <h2>Projeto Beauty Salon NLW - Rocketseat</h2>
+              <p>
+                Desenvolver um site, para apresentação visual de produtos e
+                serviços (Portifólio). Foi criado a partir das aulas do curso
+                Rocketseat, utilizando HTML& CSS e JavaScript
+              </p>
+            </div>
+
+            <div class="container-slide">
+              <img src="./img/PRO3.png" alt="Img 1" />
+              <h2>Web Site Zoológico - Portfólio</h2>
+              <p>
+                Atividade curricular do módulo Web Standards 2° Semestre. Criar
+                um site baseado no zoológico de Guarulhos utilizando HTML& CSS.
+              </p>
+            </div>
+
+            <div class="container-slide">
+              <img src="./img/PRO4.png" alt="Img 1" />
+              <h2>Gamifcação 5S - Projeto Integrador</h2>
+              <p>
+                Projeto referente ao módulo Game Making Software do 3° semestre,
+                criar e desenvolver uma gamificação, aqui foi utilizado uma
+                empresa real.
+              </p>
+            </div>
+          </div>
+          <nav class="slide-nav">
+            <div class="slide-thumb"></div>
+            <button class="slide-prev">Anterior</button>
+            <button class="slide-next">Próximo</button>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <!-- SECTION CONTATO ------------------------------------------>
+    <footer>
+      <h2>Contato</h2>
+      <section id="contact">
+        <p>E-mail: denner-tarifa@outlook.com</p>
+        <p>linkedin.com/in/denner-tarifa-ribeiro-9a2710187/</p>
+        <p></p>
+        <p>GitHub:github.com/DehTarifa</p>
+      </section>
+    </footer>
+
+    <!-- SCRIPT JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

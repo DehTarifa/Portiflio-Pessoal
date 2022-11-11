@@ -250,7 +250,7 @@ CONTAINER CARD ------------------------------------------*/
 
 .card-superior {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(/img/img-superior.jpg);
+    url(../img/img-superior.jpg);
   background-position: center;
   background-size: cover;
   color: var(--cor-cinza6);
@@ -261,7 +261,7 @@ CONTAINER CARD ------------------------------------------*/
 
 .card-curso {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(/img/img-curso.jpg);
+    url(../img/img-curso.jpg);
   background-position: center;
   background-size: cover;
   color: var(--cor-cinza6);
@@ -272,7 +272,7 @@ CONTAINER CARD ------------------------------------------*/
 
 .card-cursoJS {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(/img/img-cursoJS.png);
+    url(../img/img-cursoJS.png);
   background-position: center;
   background-size: cover;
   color: var(--cor-cinza6);

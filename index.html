@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifólio</title>
 
-    <!-- URL FONT 
-    font-family: 'Montserrat', sans-serif; -->
+    <!-- URL FONT font-family: 'Montserrat', sans-serif;
+    ------------------------------------------------------------------------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,49 +15,54 @@
       rel="stylesheet"
     />
 
-    <!-- BOOTSTRAP ICONS -->
+    <!-- BOOTSTRAP ICONS 
+    ------------------------------------------------------------------------------------------->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
 
-    <!-- STYLE CSS -->
-    <link rel="stylesheet" href="styles/style.css" />
+    <!-- STYLE CSS 
+    ------------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
 
   <body>
     <!-- HEADER MENU ------------------------------------------>
     <header>
-      <div class="dropdown" onclick="activeMenu()">
-        <input type="text" id="input-menu" readonly placeholder="Selecione" />
-
-        <div class="menu-option">
+      <nav class="navbar">
+        <div class="nav-links">
           <ul>
-            <li>
-              <a href="#about-me" onmousemove="show('Sobre Mim')">Sobre Mim</a>
-              <a
-                href="#experience"
-                onmousemove="show('Expêriencia Profissional')"
-                >Expêriencia Profissional</a
-              >
-              <a href="#academic" onmousemove="show('Formação Academico')"
-                >Formação Acadêmica</a
-              >
-              <a href="#project" onmousemove="show('Projetos Pessoais')"
-                >Projetos Pessoais</a
-              >
-              <a href="#contact" onmousemove="show('Contato Pessoal')"
-                >Contato Pessoal</a
-              >
-            </li>
+            <li class="active"><a href="#">Introdução</a></li>
+            <li><a href="#">Sobre Mim</a></li>
+            <li><a href="#">Expêriencia </a></li>
+            <li><a href="#">Formação </a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Habilidades </a></li>
+            <li><a href="#">Contato</a></li>
           </ul>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main>
       <!-- SECTION ABOUT-ME ------------------------------------------>
-      <section id="about-me">
+
+      <section id="section-introduction" class="disp-colum">
+        <h1>Olá!</h1>
+        <h2>Meu nome é Denner</h2>
+        <p>
+          Este é meu portfólio pessoal onde apresento minhas experiências
+          profissionais e acadêmicas, também falo um pouco sobre minha história
+          e habilidades.
+        </p>
+        <img src="img/img-boneco.svg" alt="" />
+      </section>
+
+      <!-- SECTION ABOUT-ME ------------------------------------------>
+
+      <section id="section-about-me">
         <div id="aboutme-img"></div>
 
         <div id="aboutme-text">
@@ -77,8 +82,8 @@
 
       <!-- SECTION EXPERIENCE ------------------------------------------>
 
-      <section id="experience">
-        <h2 class="section-title">Expêrencia Profissional</h2>
+      <section id="section-experience" class="disp-colum">
+        <h2 class="section-title">Expêriencia Profissional</h2>
 
         <div class="container-card">
           <h2>Auxiliar de almoxarifado</h2>
@@ -133,7 +138,8 @@
       </section>
 
       <!-- SECTION ACADEMIC ------------------------------------------>
-      <section id="academic">
+
+      <section id="section-academic" class="disp-colum">
         <h2 class="section-title">Formação academica</h2>
 
         <div class="container-card card-superior">
@@ -193,7 +199,7 @@
       </section>
 
       <!-- SECTION PROJECT ------------------------------------------>
-      <section id="project">
+      <section id="section-project" class="disp-colum">
         <h2 class="section-title">Projetos Pessoais</h2>
 
         <div data-slide="slide" class="slide">
@@ -247,16 +253,16 @@
     </main>
 
     <!-- SECTION CONTATO ------------------------------------------>
-    <footer>
-      <h2>Contato</h2>
-      <section id="contact">
-        <p>E-mail: denner-tarifa@outlook.com</p>
-        <p>linkedin.com/in/denner-tarifa-ribeiro-9a2710187/</p>
-        <p></p>
-        <p>GitHub:github.com/DehTarifa</p>
-      </section>
-    </footer>
 
+    <footer id="section-contact" class="disp-colum">
+      <h2 class="section-title">Contato</h2>
+
+      <div id="footer-contact">
+        <a href="#"><i class="bi bi-github"></i></a>
+        <a href="#"><i class="bi bi-envelope-paper"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </footer>
     <!-- SCRIPT JS -->
     <script src="js/script.js"></script>
   </body>

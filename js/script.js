@@ -1,12 +1,18 @@
 // FUNÇÃO MENU ------------
 
-function activeMenu() {
-  let dropdrown = document.querySelector('.dropdown')
-  dropdrown.classList.toggle('active')
+function show(a){
+  document.querySelector('.text02').value = a
 }
 
-function show(a) {
-  document.querySelector('#input-menu').value = a
+let dropdown = document.querySelector('.header-menu-dropdown')
+dropdown.onclick = function(){
+  dropdown.classList.toggle('active')
+}
+
+function openVisual() {
+  const aboutP = document.querySelector('.container-card')
+
+  aboutP.classList.toggle('open-visual')
 }
 
 // FUNÇÃO SLIDER

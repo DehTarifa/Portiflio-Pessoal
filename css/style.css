@@ -1,406 +1,338 @@
-/* CSS RESET
---------------------------------------------------------------*/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-}
-
-:root {
-  --color-primary01: rgba(24, 29, 35, 1);
-  --color-primary02: rgb(33, 43, 54);
-  --color-primary03: #f3efe0;
-  --color-primary04: #f3efe0;
-  --color-primary05: #1fa0bf;
-
-  --cor-cinza1: #252525;
-  --cor-cinza2: #bdbdbd;
-  --cor-cinza3: #c9c9c9;
-  --cor-cinza5: #dfdfdf;
-  --cor-cinza6: #f3f3f3;
-  --cor-branca: #fff;
-
-  --gradiend1: linear-gradient(
-    342deg,
-    rgba(24, 29, 35, 1) 0%,
-    rgba(35, 77, 105, 1) 100%
-  );
-
-  --gradiend2: linear-gradient(
-    180deg,
-    rgba(24, 29, 35, 1) 0%,
-    rgba(42, 84, 87, 1) 49%,
-    rgba(35, 77, 105, 1) 100%
-  );
-}
-
-/* ALL CSS 
---------------------------------------------------------------*/
-
-.disp-colum {
+/* ALL SECTION  ---------------------------------*/
+body{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 20px;
-  padding: 20px 0px;
   align-items: center;
+  background-color: var(--color-base-dark-grey1);
 }
 
-.section-title {
-  width: 100%;
-  max-width: 700px;
+
+.defaut-content {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+}
+
+.arrow-next{
+  font-size: 2rem;
+  color: var(--text-color-grey);
+  position: absolute;
+  align-self:  flex-end;
+  vertical-align: bottom;
+  line-height: 2rem;
+}
+
+.title_section{
+  font-size: 1.5rem;
   text-transform: uppercase;
+  color: var(--text-color-blue);
 }
 
-/* ALL SECTION 
---------------------------------------------------------------*/
-#section-introduction {
-  background: var(--gradiend2);
+section{
   height: 100vh;
-  color: var(--cor-cinza6);
-  justify-content: end;
-  gap: 0;
+  width: 100%;
+  max-width: 42rem;
 }
 
-#section-about-me {
+#section_introduction{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+#section_aboutme{
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 6)), url(/img/Perfil.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#section_info{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  background: var(--cor-cinza5);
 }
 
-#section-experience {
-  background: var(--cor-cinza6);
+#section_experience{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#section-academic {
-  background: var(--cor-cinza5);
+#section_academic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#section-project {
-  background-color: var(--color-cinza01);
-}
-
-#section-contact {
-  background-color: var(--cor-cinza1);
-  padding: 50px 0px;
-  color: var(--cor-cinza6);
-}
-
-/* SECTION INTRODUÇÃO
---------------------------------------------------------------*/
-
-#section-introduction h1 {
-  text-transform: uppercase;
-  font-size: 78pt;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #1fa0bf;
-}
-
-#section-introduction h2 {
-  text-transform: uppercase;
-  font-size: 25pt;
-  font-weight: 400;
-  width: 80%;
-  max-width: 700px;
-  line-height: 30px;
-  text-align: center;
-}
-
-#section-introduction p {
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 25px;
-  font-size: 16pt;
-}
-
-#section-introduction img {
-  width: 80%;
-  max-width: 450px;
-  margin-bottom: -24px;
-}
-
-/* HEADER NAV BAR
---------------------------------------------------------------*/
-.navbar {
-  position: absolute;
-  padding: 50px;
+/* MENU HEADER DROPDOWN
+---------------------------------------------------*/
+header{
+  background: var(--color-base-dark-grey2);
   width: 100%;
   align-items: center;
 }
 
-.navbar a {
-  color: white;
-}
-
-.navbar .logo {
-  font-size: 22pt;
-  font-weight: bold;
-  color: #1fa0bf;
-}
-
-.navbar .nav-links ul {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-}
-
-.navbar .nav-links ul li {
-  margin: 0px 25px;
-}
-
-.navbar .nav-links ul li.active a {
-  color: #1fa0bf;
-  font-weight: 600;
-}
-
-/* SECTION ABOUT-ME TEXT
---------------------------------------------------------------*/
-
-#aboutme-text {
-  margin: auto;
-  background-color: var(--cor-branca);
+.header-menu-dropdown {
+  position: absolute;
   width: 100%;
-  max-width: 700px;
-  padding: 1.5rem;
+  max-width: 40rem;
+  height: 3rem;
+  background: var(--color-base-dark-grey2);
 }
 
-#aboutme-text h2 {
-  font-size: 16pt;
+.header-menu-dropdown::before{
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: 28px;
+  width: 12px;
+  height: 2px;
+  background-color: var(--text-color-white);
+  z-index: 10;
+  transform: rotate(40deg);
+  transition: .5s;
+}
+
+.header-menu-dropdown.active::before{
+  right: 20px;
+}
+
+.header-menu-dropdown::after{
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 12px;
+  height: 2px;
+  background-color: var(--text-color-white);
+  z-index: 10;
+  transform: rotate(-40deg);
+  transition: .5s;
+}
+
+.header-menu-dropdown.active::after{
+  right: 28px;
+}
+
+.header-menu-dropdown input {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: .8rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--base-color-2);
+  outline: none;
+  border: none;
+  color: var(--text-color-grey);
+}
+
+/* MENU HEADER OPTION LINKS
+---------------------------------------------------*/
+
+.header-menu-dropdown .option {
+  top: 3rem;
+  width: 100%;
+  background: var(--color-base-dark-grey2);
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: .25s;
+}
+
+.header-menu-dropdown.active .option{
+  visibility: visible;
+  opacity: 1;
+}
+
+.header-menu-dropdown .option ul{
+  padding: 1rem 1rem 1rem 0rem ;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.header-menu-dropdown .option ul li a{
+  text-decoration: none;
+  font-size: 14pt;
+  color: var(--text-color-grey);
+}
+
+.header-menu-dropdown .option ul li span i{
+  font-size: 14pt;
+  color: var(--text-color-grey);
+  margin-right: 10px;
+}
+
+.header-menu-dropdown .option ul li{
+  padding: .5rem 1rem;
+}
+
+.header-menu-dropdown .option ul li:hover{
+  background: var(--text-color-blue);
+}
+
+/* SECTION INTRODUCTION  ---------------------------------*/
+
+.container_introduction h1{
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--text-color-blue);
+}
+
+.container_introduction h2{
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-color-grey);
+  margin-top: -1.3rem;
+  margin-bottom: 3rem;
+  background-color: ;
+}
+
+.container_introduction p{
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  color: var(--text-color-grey);
+  line-height: 25px;
+}
+
+.container_introduction img{
+  width: 90%;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+/* SECTION ABOUT ME  ---------------------------------*/
+
+.container-aboutme h2{
+  color: var(--text-color-blue);
   text-transform: uppercase;
-  text-align: center;
+  font-size: 2rem;
   font-weight: 800;
 }
 
-#aboutme-text h3 {
-  font-size: 11pt;
-  text-align: center;
+.container-aboutme h3{
+  color: var(--text-color-grey);
   font-weight: 400;
-  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-#aboutme-text p {
-  font-size: 10pt;
-  padding: 20px 10px;
+.container-aboutme p{
+  color: var(--text-color-grey);
   text-align: justify;
-  line-height: 22px;
-  border-top: 1px solid var(--cor-cinza5);
+  padding: 3rem 1rem; 
+  margin-bottom: 3rem;
 }
 
-/* SECTION ABOUT-ME IMG
---------------------------------------------------------------*/
+.container-aboutme .p-active{
+  background: var(--backgraound-color1);
+  color: var(--text-color-white);
+}
 
-#aboutme-img {
-  width: 98%;
-  max-width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../img/Perfil.jpg);
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.3);
-  border: 5px solid var(--cor-cinza5);
+.container-aboutme i{
+  color: var(--text-color-grey);
+  font-size: 2rem;
+}
+
+.container-aboutme span{
+  color: var(--text-color-grey);
+  text-transform: uppercase;
+  font-size: .6rem;
+}
+
+/* SECTION INFORMATION / SKILL  ---------------------------------*/
+
+.container_info{
+  width: 22rem;
   margin: auto;
 }
 
-/* SECTION EXPERIENCE - ACADEMIC CONTAINER CARD 
---------------------------------------------------------------*/
+.container_info ul {
+  padding: 2rem 4rem;
+  text-align: left;
+}
 
-.container-card {
+.container_info ul li{
+  color: var(--text-color-grey);
+  font-size: .8rem;
+  margin-bottom: 10px;
+}
+
+.card-information ul {
+  list-style: none;
+  padding: 2rem 1rem;
+}
+
+.container_skill{
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill_card{
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color-grey);
+  transition: 0.5s;
+}
+
+.skill_card:hover{
+  transform: scale(1.2);
+  color: var(--text-color-white);
+}
+
+.skill_card i {
+  font-size: 5.5rem;
+}
+
+/* SECTION INFORMATION / SKILL  ---------------------------------*/
+
+.information_card{
+  background: var(--backgraound-color1);
+  margin-top: 2.5rem;
+  height: 10rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5px 15px;
-  text-align: justify;
-  margin-top: 10px;
-  background-color: var(--cor-branca);
-  width: 100%;
-  max-width: 700px;
-  height: 280px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.container-card h2 {
-  font-size: 13pt;
-  text-transform: uppercase;
-}
-
-.container-card h3 {
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 12px;
-  text-transform: uppercase;
-}
-
-.container-card p {
-  font-size: 13px;
-  line-height: 19px;
-  margin-top: 15px;
-}
-
-/* SECTION ACADEMIC CONTAINER CARD ------------------------------------------*/
-
-.card-superior {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(../img/img-superior.jpg);
-  background-position: center;
-  background-size: cover;
-  color: var(--cor-cinza6);
-  height: 220px;
-  padding: 20px;
-}
-
-.card-curso {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(../img/img-curso.jpg);
-  background-position: center;
-  background-size: cover;
-  color: var(--cor-cinza6);
-  height: 220px;
-  padding: 20px;
-}
-
-.card-cursoJS {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(../img/img-cursoJS.png);
-  background-position: center;
-  background-size: cover;
-  color: var(--cor-cinza6);
-  height: 220px;
-  padding: 20px;
-}
-
-.container-card ul {
-  padding: 0px 10%;
-}
-
-/* ACADEMIC PROJECT ------------------------------------------*/
-
-.container-slide h2 {
-  padding: 20px;
-  font-size: 13pt;
-  text-transform: uppercase;
-  height: 80px;
-  border-bottom: 1px solid var(--cor-cinza1);
-  background: var(--cor-branca);
   text-align: center;
-  justify-content: center;
+  color: var(--text-color-white);
 }
 
-.container-slide p {
-  padding: 15px;
-  font-size: 11pt;
-  height: 120px;
-  background: var(--cor-branca);
-  justify-content: center;
-  text-align: justify;
+.information_card h3{
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
-.slide-items img {
-  max-width: 100%;
-  display: block;
+.information_card h4{
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 5px;
 }
 
-.slide {
-  max-width: 450px;
-  margin: auto;
-  display: grid;
-  box-shadow: 0 4px 20px 2px rgba(0, 0, 0, 0.4);
+.information_card p{
+  font-size: .8rem;
+  font-weight: 300;
+  margin-bottom: 5px;
 }
 
-.slide-items {
-  position: relative;
-  grid-area: 1/1;
-  overflow: hidden;
+.information_card i{
+  font-size: 1rem;
 }
 
-.slide-nav {
-  grid-area: 1/1;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  padding: 20px;
+.information_card span{
+  font-size: .8rem;
+  font-weight: 200;
 }
 
-.slide-nav button {
-  /* -webkit-appearance: none; */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  opacity: 0;
-}
+/* FOOTER  ---------------------------------*/
 
-.slide-items > * {
-  position: absolute;
-  top: 0px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.slide-items > .active {
-  position: relative;
-  opacity: 1;
-  pointer-events: initial;
-}
-
-.slide-thumb {
-  display: flex;
-  grid-column: 1 / 3;
-}
-
-.slide-thumb > span {
-  flex: 1;
-  display: block;
-  height: 3px;
-  background: rgba(0, 0, 0, 0.4);
-  margin: 5px;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.slide-thumb > span.active::after {
-  content: '';
-  display: block;
-  height: inherit;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 3px;
-  transform: translateX(-100%);
-  animation: thumb 5s forwards linear;
-}
-
-@keyframes thumb {
-  to {
-    transform: initial;
-  }
-}
-
-/* SECTION CONTACT ------------------------------------------*/
-
-#footer-contact {
-  display: flex;
-  justify-content: space-around;
-  width: 320px;
-}
-
-#footer-contact a {
-  transition: 1.3s;
-}
-
-#footer-contact a:hover {
-  transform: scale(1.3);
-  transition: 1.3s;
-}
-
-#footer-contact a i {
-  font-size: 22pt;
-  color: var(--cor-cinza6);
+footer{
+  width: 100%;
+  height: 20rem;
+  background-color: var(--text-color-white);
 }

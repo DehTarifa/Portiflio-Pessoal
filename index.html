@@ -1,245 +1,235 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifólio</title>
+<html lang="pt_br">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- URL FONT font-family: 'Montserrat', sans-serif;
-    ------------------------------------------------------------------------------------------->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- LINKS CSS ----------------------------->
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/style.css">
 
-    <!-- BOOTSTRAP ICONS 
-    ------------------------------------------------------------------------------------------->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
+  <!-- BOOTSTRAP ICON ------------------------>
+  <link
+   rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+  />
 
-    <!-- STYLE CSS 
-    ------------------------------------------------------------------------------------------->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media.css" />
-  </head>
+  <title>Porfiólio Denner</title>
+ </head>
 
-  <body>
-    <!-- HEADER MENU ------------------------------------------>
+ <body>
 
-    <main>
-      <!-- SECTION ABOUT-ME ------------------------------------------>
+  <header>
+    <!-- HEADER DROPDOWNMENU -->
+    <div class="header-menu-dropdown">
+     <input
+      type="text"
+      class="text02"
+      readonly
+      placeholder="Selecione uma opção"
+     />
+ 
+     <!-- OPTION DROPDOWNMENU -->
+ 
+     <nav class="option">
+      <ul>
+       <li onmouseover="show('Introdução')">
+        <span><i class="bi bi-tags"></i></span>
+        <a href="#section_introduction">Introdução</a>
+       </li>
+ 
+       <li onmouseover="show('Sobre mim')">
+        <span><i class="bi bi-person"></i></span>
+        <a href="#section_aboutme">Sobre mim</a>
+       </li>
+ 
+       <li onmouseover="show('Informações')">
+        <span><i class="bi bi-cup-hot"></i></span>
+        <a href="#section_info">Informações</a>
+       </li>
+ 
+       <li onmouseover="show('Experiência profissional')">
+        <span><i class="bi bi-briefcase"></i></span>
+        <a href="#section_experience">Experiência profissional</a>
+       </li>
+ 
+       <li onmouseover="show('Formação acadêmica')">
+        <span><i class="bi bi-mortarboard"></i></span>
+        <a href="#section_academic">Formação acadêmica</a>
+       </li>
+ 
+       <li onmouseover="show('Contato')">
+        <span><i class="bi bi-phone"></i></span>
+        <a href="#section-contact">Contato</a>
+       </li>
 
+      </ul>
+     </nav>
+    </div>
+   </header>
 
+  <main>
 
-      <!-- SECTION ABOUT-ME ------------------------------------------>
+    <!-- SECÇÃO INTRODUCTION ------------------------>
+    <section id="section_introduction">
 
-      <section id="section-about-me">
-        <div id="aboutme-img"></div>
-
-        <div id="aboutme-text">
-          <h2>Sobre mim</h2>
-          <h3>Carta de apresentação</h3>
-          <p>
-            Olá, meu nome é Denner Tarifa Ribeiro, tenho 23 anos, sou estudante
-            do curso de Análise e Desenvolvimento de sistemas, onde procuro
-            oportunidades para iniciar a minha carreira profissional na área de
-            TI, afim de aprender e desenvolver minhas habilidades profissionais
-            e pessoais. Estou me desenvolvendo nas linguagens JavaScript,
-            nodejs, sql, mas sou flexível para aprender outras, trabalho bem em
-            equipe e sempre busco por melhores resultados.
-          </p>
-        </div>
-      </section>
-
-      <!-- SECTION EXPERIENCE ------------------------------------------>
-
-      <section id="section-experience" class="disp-colum">
-        <h2 class="section-title">Expêriencia Profissional</h2>
-
-        <div class="container-card">
-          <h2>Auxiliar de almoxarifado</h2>
-          <h3>
-            Maferita Cosméticos LTDA | Guarulhos - SP | 02/2021 - 10/2022.
-          </h3>
-          <p>
-            <strong>Atividades exercidas:</strong> Auxiliar a produção a atingir
-            os resultados esperados como metas estabelecidas, além disso
-            prevenir o desperdício de produto e insumos, sempre presando pelo
-            melhor resulto possível. Gerenciar o estoque de modo que fique
-            sempre organizado, sempre alimentando as linhas de produção.
-            Realizar carga e descarga de produtos acabados, recebimento de
-            matéria prima.
-          </p>
-          <p>
-            <strong>Cargos:</strong> Alimentador de linha de produção / Auxiliar
-            de almoxarifado.
-          </p>
-        </div>
-
-        <div class="container-card">
-          <h2>Auxiliar de pintura e acabamento</h2>
-          <h3>Autônomo | Maria da fé - MG | 01/2018 - 10/2020</h3>
-          <p>
-            <strong>Atividades exercidas:</strong> Auxiliar a produção a atingir
-            os resultados esperados como metas estabelecidas, além disso
-            prevenir o desperdício de produto e insumos, sempre presando pelo
-            melhor resulto possível. Gerenciar o estoque de modo que fique
-            sempre organizado, sempre alimentando as linhas de produção.
-            Realizar carga e descarga de produtos acabados, recebimento de
-            matéria prima.
-          </p>
-          <p>
-            <strong>Cargos:</strong> Auxiliar de pintura / Responsável Técnico
-          </p>
-        </div>
-
-        <div class="container-card">
-          <h2>Auxiliar de produção</h2>
-          <h3>
-            MEI Oficina de tiaras femininas | Poá - SP | 03/2016 - 04/2017
-          </h3>
-          <p>
-            <strong>Atividades exercidas:</strong> Auxiliar no acabamento de
-            tiaras femininas, controlar o estoque de materiais para que não
-            falte material para a finalização das tiaras, auxiliar na entrega e
-            descarregamento de produtos acabados e semiacabados.
-          </p>
-          <p><strong>Cargos:</strong> Auxiliar Geral</p>
-        </div>
-      </section>
-
-      <!-- SECTION ACADEMIC ------------------------------------------>
-
-      <section id="section-academic" class="disp-colum">
-        <h2 class="section-title">Formação academica</h2>
-
-        <div class="container-card card-superior">
-          <h2>Análise e desenvolvendo de sistemas</h2>
-          <h3>
-            Ensino Superior | 11/2021 - 11/2023 Cursando | Eniac, Guarulhos - SP
-          </h3>
-          <ul>
-            <li>Desenvolvimento de software</li>
-            <li>Linguagens de programação</li>
-            <li>Ferramentas de edição para criação de projetos</li>
-            <li>Controle e gerenciamento de projetos</li>
-          </ul>
-        </div>
-
-        <div class="container-card card-curso">
-          <h2>Segurança do trabalho</h2>
-          <h3>
-            Competência Transversal 14horas | 06/2021 - 07/2021 | Senai, São
-            Paulo
-          </h3>
-          <ul>
-            <li>Conceitos e Principais acidente de Trabalho</li>
-            <li>Uma História sobre EPI e EPC</li>
-            <li>Causas mais comuns dos acidentes de trabalho</li>
-            <li>CIPA & Mapa de Risco</li>
-          </ul>
-        </div>
-
-        <div class="container-card card-curso">
-          <h2>Fundamentos da Logística</h2>
-          <h3>
-            Competência Transversal 14horas | 06/2021 - 06/2021 | Senai, São
-            Paulo
-          </h3>
-          <ul>
-            <li>Modalidades de Transporte</li>
-            <li>Sistemas de Transporte</li>
-            <li>Gestão da Qualidade</li>
-            <li>Modal Rodoviário, Ferroviário, Aquaviário, Dutoviário</li>
-          </ul>
-        </div>
-
-        <div class="container-card card-cursoJS">
-          <h2>Módulo Básico JavaScript</h2>
-          <h3>
-            Módulo Básico 40Horas | 05/2022 - 06/2022 | Curso em vídeo, Rio de
-            Janeiro
-          </h3>
-          <ul>
-            <li>Comando Básicos em JavaScript</li>
-            <li>Repetições em JavaScript</li>
-            <li>Condições em JavaScript</li>
-            <li>Entendendo o DOM</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- SECTION PROJECT ------------------------------------------>
-      <section id="section-project" class="disp-colum">
-        <h2 class="section-title">Projetos Pessoais</h2>
-
-        <div data-slide="slide" class="slide">
-          <div class="slide-items">
-            <div class="container-slide">
-              <img src="./img/PRO1.png" alt="Img 1" />
-              <h2>Controle de estoque - Projeto Pessoal</h2>
-              <p>
-                Desenvolver um programa que o usuário pudesse cadastrar seus
-                produtos, e ao mesmo tempo conferi los, utilizando HTML& CSS e
-                JavaScript
-              </p>
-            </div>
-
-            <div class="container-slide">
-              <img src="./img/PRO2.png" alt="Img 1" />
-              <h2>Projeto Beauty Salon NLW - Rocketseat</h2>
-              <p>
-                Desenvolver um site, para apresentação visual de produtos e
-                serviços (Portifólio). Foi criado a partir das aulas do curso
-                Rocketseat, utilizando HTML& CSS e JavaScript
-              </p>
-            </div>
-
-            <div class="container-slide">
-              <img src="./img/PRO3.png" alt="Img 1" />
-              <h2>Web Site Zoológico - Portfólio</h2>
-              <p>
-                Atividade curricular do módulo Web Standards 2° Semestre. Criar
-                um site baseado no zoológico de Guarulhos utilizando HTML& CSS.
-              </p>
-            </div>
-
-            <div class="container-slide">
-              <img src="./img/PRO4.png" alt="Img 1" />
-              <h2>Gamifcação 5S - Projeto Integrador</h2>
-              <p>
-                Projeto referente ao módulo Game Making Software do 3° semestre,
-                criar e desenvolver uma gamificação, aqui foi utilizado uma
-                empresa real.
-              </p>
-            </div>
-          </div>
-          <nav class="slide-nav">
-            <div class="slide-thumb"></div>
-            <button class="slide-prev">Anterior</button>
-            <button class="slide-next">Próximo</button>
-          </nav>
-        </div>
-      </section>
-    </main>
-
-    <!-- SECTION CONTATO ------------------------------------------>
-
-    <footer id="section-contact" class="disp-colum">
-      <h2 class="section-title">Contato</h2>
-
-      <div id="footer-contact">
-        <a href="#"><i class="bi bi-github"></i></a>
-        <a href="#"><i class="bi bi-envelope-paper"></i></a>
-        <a href="#"><i class="bi bi-linkedin"></i></a>
+      <div class="container_introduction defaut-content">
+        <h1>Olá</h1>
+        <h2>Meu nome é Denner</h2>
+        <p>
+          Este é meu portfólio pessoal, onde apresento algumas informações sobre mim, experiência profissional e acadêmica, também comento um pouco sobre meus projetos e conhecimentos 
+        </p>
+        <img src="img/introduction-person.png" alt="imagem de uma pessoa 3D">
+        <a href="#section_aboutme" class="arrow-next"><i class="bi bi-arrow-down-circle"></i></a>
       </div>
-    </footer>
-    <!-- SCRIPT JS -->
-    <script src="js/script.js"></script>
-  </body>
+
+    </section>
+
+    <!-- SEÇÃO ABOUT ME --------------------------->
+    <section id="section_aboutme">
+
+      <div class="container-aboutme defaut-content">
+        <h2>Sobre mim</h2>
+        <h3>Carta de apresentação</h3>
+        <p class="">
+          Prezados Senhores (a).
+          <br><br>
+          Meu nome é Denner Tarifa Ribeiro, tenho 23 anos, sou estudante do curso de Análise e Desenvolvimento de sistemas, onde procuro oportunidades para iniciar a minha carreira profissional na área de TI, afim de aprender e desenvolver minhas habilidades profissionais e pessoais. Estou me desenvolvendo nas linguagens  JavaScript, nodejs, sql, mas sou flexível para aprender, trabalho bem em equipe e sempre busco por melhores resultados.
+        </p>
+        <i class="bi bi-mouse"></i> 
+        <span>Clique para mudar</span>
+        <div class="content-divider"></div>
+        <a href="#section_info" class="arrow-next"><i class="bi bi-arrow-down-circle"></i></a>
+      </div>
+
+    </section>
+
+    <!-- SEÇÃO INFORMATION / SKILL --------------------------->
+    <section id="section_info">
+
+      <div class="container_info  defaut-content">
+        
+        <!-- PERSONAL INFORMATION -->
+        <h2 class="title_section">Informações Pessoais</h2>
+        <div class="card-information">
+          <ul>
+            <li>Nascimento: 17/08/1999 - 23 anos</li>
+            <li>Localização: Mogi das cruzes - SP</li>
+            <li>Escolaridade: Ensino Superior Cursando </li>
+            <li>Curso: Análise e Desenvolvimento de Sistemas</li>
+          </ul>
+        </div>
+        
+
+        <!-- PERSONAL SKILL -->
+        <h2 class="title_section">habilidades</h2>
+        <ul>
+          <li>Flexível</li>
+          <li>Organizado</li>
+          <li>Criativo</li>
+          <li>Trabalho em equipe</li>
+        </ul>
+
+        <!-- CARD SKILL -->
+        <div class="container_skill">
+
+          <div class="skill_card">
+            <i class="bi bi-filetype-html"></i>
+            <span>62%</span>
+          </div>
+
+          <div class="skill_card">
+            <i class="bi bi-filetype-css"></i>
+            <span>53%</span>
+          </div>
+
+          <div class="skill_card">
+            <i class="bi bi-filetype-js"></i>
+            <span>27%</span>
+          </div>
+        </div>
+
+        <a href="#section_experience" class="arrow-next"><i class="bi bi-arrow-down-circle"></i></a>
+      </div>
+
+    </section>
+
+    <!-- SEÇÃO EXPERIENCE PROFISSIONAL --------------------------->
+    <section id="section_experience">
+      
+      <div class="container_experience defaut-content">
+        <h2 class="title_section">Experiência profissional</h2>
+
+        <div class="information_card">
+          <h3>Maferita Cosméticos LTDA</h3>
+          <p>02/2021 -  10/2022</p>
+          <h4>Auxiliar de produção / Almoxarife</h4>
+          <i class="bi bi-mouse"></i>
+          <span>clique para alterar</span>
+        </div>
+
+        <div class="information_card">
+          <h3>Pintura e acabamento</h3>
+          <p>01/2018 -  11/2020</p>
+          <h4>Auxiliar de pintura e acabamento / Responsável Técnico</h4>
+          <i class="bi bi-mouse"></i>
+          <span>clique para alterar</span>
+        </div>
+
+        <div class="information_card">
+          <h3>Auxiliar de produção</h3>
+          <p>04/2016 -  06/2017</p>
+          <h4>Auxiliar de produção</h4>
+          <i class="bi bi-mouse"></i>
+          <span>clique para alterar</span>
+        </div>
+
+        <a href="#section_academic" class="arrow-next"><i class="bi bi-arrow-down-circle"></i></a>
+      </div>
+    </section>
+
+    <!-- SEÇÃO EXPERIENCE PROFISSIONAL --------------------------->
+    <section id="section_academic">
+      <div class="contaienr_academic">
+
+        <h2 class="title_section">Formação Acadêmica</h2>
+
+        <div class="information_card">
+          <h3>Análise e desenvolvendo de Sisteams</h3>
+          <p>11/2021 -  11/2023</p>
+          <h4>Centro Universitário ENIAC</h4>
+          <i class="bi bi-mouse"></i>
+          <span>clique para alterar</span>
+        </div>
+
+        <div class="information_card">
+          <h3>Segurança do trabalho</h3>
+          <p>04/2016 -  06/2017</p>
+          <h4>Auxiliar de produção</h4>
+          <i class="bi bi-mouse"></i>
+          <span>clique para alterar</span>
+        </div>
+
+        <div class="information_card">
+          <h3>Auxiliar de produção</h3>
+          <p>04/2016 -  06/2017</p>
+          <h4>Auxiliar de produção</h4>
+          <i class="bi bi-mouse"></i>
+          <span>clique para alterar</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- SEÇÃO PROJECTS --------------------------->
+
+  </main>
+
+  <footer id="section-contact">
+    <h3>contato</h3>
+    
+  </footer>
+
+  <script src="js/script.js"></script>
+ </body>
 </html>

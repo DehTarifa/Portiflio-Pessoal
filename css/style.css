@@ -1,4 +1,33 @@
-/* TAG HMTL ---------------------------------*/
+/* GLOBAL ---------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* RESET CSS ---------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* VARIABLES ---------------------------------*/
+
+:root {
+  --text-color-white: #fff;
+  --text-color-blue: #338fd4;
+  --text-color-grey: #c3c2c2;
+
+  --color-base-dark-grey1: #242424;
+  --color-base-dark-grey2: #201f1f;
+  --color-base-blue-fundo: #338fd4;
+
+  --backgraound-color1: linear-gradient(
+    170deg,
+    rgba(33, 94, 145, 1) 0%,
+    rgba(22, 140, 237, 1) 100%
+  );
+  --backgraound-color2: ;
+  --backgraound-color3: ;
+}
 
 main{
   display: flex;
@@ -15,7 +44,9 @@ main{
   position: relative;
   height: 100vh;
   width: 100%;
-  max-width: 40rem;
+  max-width: 45rem;
+
+  border-bottom: 1px solid var(--text-color-grey);
 }
 
 .defaut_flex_colum {
@@ -184,7 +215,7 @@ header {
 
 .container_introduction img {
   width: 90%;
-  max-width: 32rem;
+  max-width: 25rem;
   margin: 0 auto;
 }
 
@@ -349,6 +380,12 @@ header {
 .information_card span {
   font-size: 0.8rem;
   font-weight: 200;
+}
+/* SECTION PROJECT  ---------------------------------*/
+
+.container_project {
+  justify-content: center;
+  color: var(--text-color-grey);
 }
 
 /* FOOTER  ---------------------------------*/

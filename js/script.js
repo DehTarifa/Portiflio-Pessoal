@@ -1,18 +1,20 @@
-// FUNÇÃO MENU ------------
+// FUNCTION DROPDOWN MENU -------------------------*
 
-function show(a){
-  document.querySelector('.text02').value = a
+function show(a) {
+  document.querySelector('.nav_dropdown_option').value = a
 }
 
-let dropdown = document.querySelector('.header-menu-dropdown')
-dropdown.onclick = function(){
+let dropdown = document.querySelector('.header_dropdown_menu')
+  dropdown.onclick = function () {
   dropdown.classList.toggle('active')
 }
 
-function openVisual() {
-  const aboutP = document.querySelector('.container-card')
+// STYLE MODAL -----------------------------------*
 
-  aboutP.classList.toggle('open-visual')
+function openVisual() {
+  const aboutP = document.querySelector('.content_aboutme_p')
+
+  aboutP.classList.toggle('p-active')
 }
 
 // FUNÇÃO SLIDER

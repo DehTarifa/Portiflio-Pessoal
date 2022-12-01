@@ -1,88 +1,67 @@
-/* ALL SECTION  ---------------------------------*/
-body{
+/* TAG HMTL ---------------------------------*/
+
+main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-base-dark-grey1);
+  background: var(--color-base-dark-grey1);
 }
 
+/* CLASS GLOBAL ---------------------------------*/
 
-.defaut-content {
+.defaut_section{
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.defaut_flex_colum {
+  width: 100%;
+  height: 100%;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
-.arrow-next{
-  font-size: 2rem;
-  color: var(--text-color-grey);
-  position: absolute;
-  align-self:  flex-end;
-  vertical-align: bottom;
-  line-height: 2rem;
-}
-
-.title_section{
-  font-size: 1.5rem;
+.title_section {
+  font-size: 1.8rem;
   text-transform: uppercase;
   color: var(--text-color-blue);
 }
 
-section{
-  height: 100vh;
-  width: 100%;
-  max-width: 42rem;
+.arrow-next {
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
 
-#section_introduction{
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-}
-
-#section_aboutme{
-  display: flex;
-  align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 6)), url(/img/Perfil.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-#section_info{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#section_experience{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#section_academic{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.arrow-next a i {
+  color: var(--text-color-blue);
 }
 
 /* MENU HEADER DROPDOWN
 ---------------------------------------------------*/
-header{
+header {
   background: var(--color-base-dark-grey2);
   width: 100%;
-  align-items: center;
+  position: fixed;
+  z-index: 99;
 }
 
-.header-menu-dropdown {
-  position: absolute;
+.header_dropdown_menu {
+  position: relative;
   width: 100%;
-  max-width: 40rem;
-  height: 3rem;
+  max-width: 30rem;
+  margin: auto;
+  height: 4rem;
   background: var(--color-base-dark-grey2);
 }
 
-.header-menu-dropdown::before{
+.header_dropdown_menu::before {
   content: '';
   position: absolute;
   top: 25px;
@@ -92,14 +71,14 @@ header{
   background-color: var(--text-color-white);
   z-index: 10;
   transform: rotate(40deg);
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.header-menu-dropdown.active::before{
+.header_dropdown_menu.active::before {
   right: 20px;
 }
 
-.header-menu-dropdown::after{
+.header_dropdown_menu::after {
   content: '';
   position: absolute;
   top: 25px;
@@ -109,18 +88,18 @@ header{
   background-color: var(--text-color-white);
   z-index: 10;
   transform: rotate(-40deg);
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.header-menu-dropdown.active::after{
+.header_dropdown_menu.active::after {
   right: 28px;
 }
 
-.header-menu-dropdown input {
+.header_dropdown_menu input {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  padding: .8rem 1.3rem;
+  padding: 1rem 1.3rem;
   font-size: 1rem;
   font-weight: 500;
   background-color: var(--base-color-2);
@@ -132,67 +111,70 @@ header{
 /* MENU HEADER OPTION LINKS
 ---------------------------------------------------*/
 
-.header-menu-dropdown .option {
+.header_dropdown_menu .nav_dropdown_option {
   top: 3rem;
   width: 100%;
   background: var(--color-base-dark-grey2);
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  transition: .25s;
+  transition: 0.25s;
 }
 
-.header-menu-dropdown.active .option{
+.header_dropdown_menu.active .nav_dropdown_option {
   visibility: visible;
   opacity: 1;
 }
 
-.header-menu-dropdown .option ul{
-  padding: 1rem 1rem 1rem 0rem ;
+.nav_dropdown_option ul {
+  padding: 1rem 1rem 1rem 0rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-.header-menu-dropdown .option ul li a{
+.nav_dropdown_option ul li a {
   text-decoration: none;
   font-size: 14pt;
   color: var(--text-color-grey);
 }
 
-.header-menu-dropdown .option ul li span i{
+.nav_dropdown_option ul li span i {
   font-size: 14pt;
   color: var(--text-color-grey);
   margin-right: 10px;
 }
 
-.header-menu-dropdown .option ul li{
-  padding: .5rem 1rem;
+.nav_dropdown_option ul li {
+  padding: 1rem 1rem;
 }
 
-.header-menu-dropdown .option ul li:hover{
+.nav_dropdown_option ul li:hover {
   background: var(--text-color-blue);
 }
 
 /* SECTION INTRODUCTION  ---------------------------------*/
 
-.container_introduction h1{
-  font-size: 6rem;
+.container_introduction{
+  justify-content: end;
+}
+
+.container_introduction h1 {
+  font-size: 8rem;
   font-weight: 900;
   color: var(--text-color-blue);
 }
 
-.container_introduction h2{
+.container_introduction h2 {
   font-size: 1.8rem;
   font-weight: 400;
   color: var(--text-color-grey);
   margin-top: -1.3rem;
   margin-bottom: 3rem;
-  background-color: ;
 }
 
-.container_introduction p{
+.container_introduction p {
   max-width: 30rem;
   margin: 0 auto;
   margin-bottom: 3rem;
@@ -200,66 +182,99 @@ header{
   line-height: 25px;
 }
 
-.container_introduction img{
+.container_introduction img {
   width: 90%;
-  max-width: 30rem;
+  max-width: 32rem;
   margin: 0 auto;
 }
 
 /* SECTION ABOUT ME  ---------------------------------*/
 
-.container-aboutme h2{
+#section_aboutme {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 6)),
+    url(/img/Perfil.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.container-aboutme{
+  justify-content: center;
+}
+
+.container-aboutme h2 {
   color: var(--text-color-blue);
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
+
 }
 
-.container-aboutme h3{
+.container-aboutme h3 {
   color: var(--text-color-grey);
+  text-transform: uppercase;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 3rem;
 }
 
-.container-aboutme p{
+.container-aboutme p {
   color: var(--text-color-grey);
   text-align: justify;
-  padding: 3rem 1rem; 
-  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
+  max-width: 30rem;
+  margin: 0 auto;
+  transition: .6s;
 }
 
-.container-aboutme .p-active{
+.container-aboutme .p-active {
+  transition: .6s;
   background: var(--backgraound-color1);
   color: var(--text-color-white);
 }
 
-.container-aboutme i{
+.container-aboutme button {
+  background: transparent;
+  border: none;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.container-aboutme i {
   color: var(--text-color-grey);
   font-size: 2rem;
 }
 
-.container-aboutme span{
+.container-aboutme span {
   color: var(--text-color-grey);
   text-transform: uppercase;
-  font-size: .6rem;
+  font-size: 0.6rem;
+}
+
+.content-divider {
+  background: var(--backgraound-color1);
+  width: 18rem;
+  height: 1.5px;
+  margin: 0 auto;
+  margin-top: .8rem;
 }
 
 /* SECTION INFORMATION / SKILL  ---------------------------------*/
 
-.container_info{
-  width: 22rem;
-  margin: auto;
+.container_info {
+  justify-content: center;
 }
 
 .container_info ul {
   padding: 2rem 4rem;
   text-align: left;
+  width: 100%;
+  max-width: 22rem;
+  margin: 0 auto;
 }
 
-.container_info ul li{
+.container_info ul li {
   color: var(--text-color-grey);
-  font-size: .8rem;
+  font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
@@ -268,34 +283,40 @@ header{
   padding: 2rem 1rem;
 }
 
-.container_skill{
+.container_skill {
   display: flex;
   justify-content: space-around;
+  width: 100%;
+  max-width: 26rem;
+  margin: 0 auto;
 }
 
-.skill_card{
+.skill_card {
   display: flex;
   flex-direction: column;
   color: var(--text-color-grey);
   transition: 0.5s;
 }
 
-.skill_card:hover{
+.skill_card:hover {
   transform: scale(1.2);
-  color: var(--text-color-white);
+  color: var(--text-color-blue);
 }
 
 .skill_card i {
   font-size: 5.5rem;
 }
 
-/* SECTION INFORMATION / SKILL  ---------------------------------*/
+/* SECTION EXPERIENCIE / ACADEMIC  ---------------------------------*/
 
-.information_card{
+.container_experience, .contaienr_academic{
+  justify-content: center;
+}
+
+.information_card {
   background: var(--backgraound-color1);
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   height: 10rem;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,36 +324,82 @@ header{
   color: var(--text-color-white);
 }
 
-.information_card h3{
-  font-size: 1.4rem;
+.information_card h3 {
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
-.information_card h4{
+.information_card h4 {
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: 5px;
 }
 
-.information_card p{
-  font-size: .8rem;
+.information_card p {
+  font-size: 0.8rem;
   font-weight: 300;
   margin-bottom: 5px;
 }
 
-.information_card i{
+.information_card i {
+  margin-top: 10px;
   font-size: 1rem;
 }
 
-.information_card span{
-  font-size: .8rem;
+.information_card span {
+  font-size: 0.8rem;
   font-weight: 200;
 }
 
 /* FOOTER  ---------------------------------*/
 
-footer{
+#section-contact {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-base-dark-grey2);
+}
+
+#section-contact h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--text-color-grey);
+}
+
+#section-contact p {
   width: 100%;
-  height: 20rem;
-  background-color: var(--text-color-white);
+  max-width: 40rem;
+  font-size: .8rem;
+  color: var(--text-color-grey);
+  text-align: center;
+  font-weight: 300;
+}
+
+#section-contact h4 {
+  font-size: .8rem;
+  font-weight: 300;
+  margin-top: 20px;
+  color: var(--text-color-grey);
+
+}
+
+#section-contact .icon_contact{
+  width: 100%;
+  max-width: 15rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#section-contact .icon_contact a i {
+  color: var(--text-color-blue);
+  font-size: 2rem;
+}
+
+#section-contact .icon_contact a:hover{
+  transition: .6s;
+  transform: scale(1.2);
 }

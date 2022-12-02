@@ -7,8 +7,8 @@
     <title>Porfiólio Denner Tarifa</title>
     <!-- LINKS CSS ----------------------------->
 
-    <link rel="stylesheet" href="./css/media.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
 
     <!-- BOOTSTRAP ICON ------------------------>
     <link
@@ -77,17 +77,22 @@
       <section id="section_introduction" class="defaut_section">
 
         <div class="container_introduction defaut_flex_colum">
-          <h1>Olá</h1>
-          <h2>Meu nome é Denner</h2>
-          <p>
-            Este é meu portfólio pessoal, onde apresento algumas informações
-            sobre mim, experiência profissional e acadêmica, também comento um
-            pouco sobre meus projetos e conhecimentos
-          </p>
-          <img
+          <div class="introduction_text">
+            <h1>Olá</h1>
+            <h2>Meu nome é Denner</h2>
+            <p>
+              Este é meu portfólio pessoal, onde apresento algumas informações
+              sobre mim, experiência profissional e acadêmica, também comento um
+              pouco sobre meus projetos e conhecimentos
+            </p>
+          </div>
+          
+          <div class="introduction_img">
+            <img
             src="img/introduction-person.png"
             alt="imagem de uma pessoa 3D"
-          />
+            />
+          </div>
         </div>
 
         <div class="arrow-next">
@@ -184,29 +189,64 @@
         <div class="container_experience defaut_flex_colum">
           <h2 class="title_section">Experiência profissional</h2>
 
-          <div class="information_card">
-            <h3>Maferita Cosméticos LTDA</h3>
-            <p>02/2021 - 10/2022</p>
-            <h4>Auxiliar de produção / Almoxarife</h4>
-            <i class="bi bi-mouse"></i>
-            <span>clique para alterar</span>
+          <!-- CARD 01 -------------->
+          <div class="info_card">
+            <div class="info_card_content">
+                <div class="front_card">
+                  <h3>Maferita Cosméticos LTDA</h3>
+                  <p>Guarulhos - SP | 02/2021 - 10/2022.</p>
+                  <h4>Auxiliar de produção / Almoxarife</h4>
+                  <i class="bi bi-mouse"></i>
+                  <span>clique para alterar</span>
+                </div>
+     
+                <div class="back_card">
+                    <p class="description">
+                      Auxiliar a produção a atingir os resultados esperados como metas estabelecidas, além disso prevenir o desperdício de produto e insumos, sempre presando pelo melhor resulto possível. <br>
+                      Gerenciar o estoque de modo que fique sempre organizado, sempre alimentando as linhas de produção. Realizar carga e descarga de produtos acabados, recebimento de matéria prima.
+                    </p>
+                </div>
+            </div>
           </div>
 
-          <div class="information_card">
-            <h3>Pintura e acabamento</h3>
-            <p>01/2018 - 11/2020</p>
-            <h4>Auxiliar de pintura e acabamento / Responsável Técnico</h4>
-            <i class="bi bi-mouse"></i>
-            <span>clique para alterar</span>
+          <!-- CARD 02 -------------->
+          <div class="info_card">
+            <div class="info_card_content">
+                <div class="front_card">
+                  <h3>Serviço de pintura e acabamento</h3>
+                  <p>Maria da fé - MG | 01/2018 - 10/2020</p>
+                  <h4>Auxiliar de pintura / Responsável Técnico</h4>
+                  <i class="bi bi-mouse"></i>
+                  <span>clique para alterar</span>
+                </div>
+     
+                <div class="back_card">
+                    <p class="description">
+                      Realizar pintura em paredes internas e externas. Preparando as superfícies antes de pintá-las, como limpeza, aplicação de massa fina ou corrida e lixamento, prezando sempre a melhor qualidade para entrega para o cliente final. Além disso, realizar o orçamento para o cliente e efetuar compra de futuros materiais para serem utilizados durante a obra.
+                    </p>
+                </div>
+            </div>
           </div>
 
-          <div class="information_card">
-            <h3>Auxiliar de produção</h3>
-            <p>04/2016 - 06/2017</p>
-            <h4>Auxiliar de produção</h4>
-            <i class="bi bi-mouse"></i>
-            <span>clique para alterar</span>
+          <!-- CARD 03 -------------->
+          <div class="info_card">
+            <div class="info_card_content">
+                <div class="front_card">
+                  <h3>MEI Oficina de tiaras femininas</h3>
+                  <p>Poá - SP | 03/2016 - 04/2017</p>
+                  <h4>Auxiliar de produção</h4>
+                  <i class="bi bi-mouse"></i>
+                  <span>clique para alterar</span>
+                </div>
+     
+                <div class="back_card">
+                    <p class="description">
+                      Auxiliar no acabamento de tiaras femininas, controlar o estoque de materiais para que não falte material para a finalização das tiaras, auxiliar na entrega e descarregamento de produtos acabados e semiacabados.
+                    </p>
+                </div>
+            </div>
           </div>
+
         </div>
 
         <div class="arrow-next">
@@ -215,58 +255,118 @@
 
       </section>
 
-      <!-- SEÇÃO EXPERIENCE PROFISSIONAL --------------------------->
+      <!-- SEÇÃO FORMATION ACADEMIC --------------------------->
       <section id="section_academic" class="defaut_section">
         <div class="contaienr_academic defaut_flex_colum">
           <h2 class="title_section">Formação Acadêmica</h2>
 
-          <div class="information_card">
-            <h3>Análise e desenvolvendo de Sisteams</h3>
-            <p>11/2021 - 11/2023</p>
-            <h4>Centro Universitário ENIAC</h4>
-            <i class="bi bi-mouse"></i>
-            <span>clique para alterar</span>
+          <!-- CARD 01 ------------->
+          <div class="info_card">
+            <div class="info_card_content">
+                <div class="front_card">
+                  <h3>Análise e desenvolvendo de Sistemas</h3>
+                  <p>11/2021 - 11/2023</p>
+                  <h4>Centro Universitário ENIAC</h4>
+                  <i class="bi bi-mouse"></i>
+                  <span>clique para alterar</span>
+                </div>
+     
+                <div class="back_card">
+                    <p class="description">
+                      Faculdade com foco nas linguagens de programação atuais no mercado, além disso estudo sobre desenvolvimento de projetos, criação de web sites e gerenciamento de softwares.
+                    </p>
+                </div>
+            </div>
           </div>
 
-          <div class="information_card">
-            <h3>Segurança do trabalho</h3>
-            <p>06/2021 - 04/2021</p>
-            <h4>Senai - 14Horas</h4>
-            <i class="bi bi-mouse"></i>
-            <span>clique para alterar</span>
+          <!-- CARD 02 ------------->
+          <div class="info_card">
+            <div class="info_card_content">
+                <div class="front_card">
+                  <h3>Segurança do trabalho</h3>
+                  <p>06/2021 - 07/2021 14hr</p>
+                  <h4>Senai - SP</h4>
+                  <i class="bi bi-mouse"></i>
+                  <span>clique para alterar</span>
+                </div>
+     
+                <div class="back_card">
+                  <ul class="description_ul">
+                    <li>Conceitos e Principais acidente de Trabalho </li>
+                    <li>Uma História sobre EPI e EPC  </li>
+                    <li>Causas mais comuns dos acidentes de trabalho </li>
+                    <li>CIPA & Mapa de Risco </li>
+                  </ul>
+                </div>
+            </div>
           </div>
 
-          <div class="information_card">
-            <h3>Fundamento da logística</h3>
-            <p>06/2021 - 06/2021</p>
-            <h4>Senai - 14Horas</h4>
-            <i class="bi bi-mouse"></i>
-            <span>clique para alterar</span>
+          <!-- CARD 03 ------------->
+          <div class="info_card">
+            <div class="info_card_content">
+                <div class="front_card">
+                  <h3>Fundamentos da Logísctica</h3>
+                  <p>06/2021 - 06/2021 14hr</p>
+                  <h4>Senai - SP</h4>
+                  <i class="bi bi-mouse"></i>
+                  <span>clique para alterar</span>
+                </div>
+     
+                <div class="back_card">
+                  <ul class="description_ul">
+                    <li>Modalidades de Transporte </li>
+                    <li>Sistemas de Transporte   </li>
+                    <li>Gestão da Qualidade </li>
+                    <li>Modal Rodoviário, Ferroviário, Aquaviário, Dutoviário</li>
+                  </ul>
+                </div>
+            </div>
           </div>
 
-          <div class="information_card">
-            <h3>Módulo Básico JavaScript</h3>
-            <p>05/2022 - 06/2022</p>
-            <h4>Curso em vídeo - 40Horas</h4>
-            <i class="bi bi-mouse"></i>
-            <span>clique para alterar</span>
+          <!-- CARD 04 ------------->
+          <div class="info_card">
+            <div class="info_card_content">
+                <div class="front_card">
+                  <h3>Módulo Básico JavaScript</h3>
+                  <p>05/2021 - 06/2021 40hr</p>
+                  <h4>Curso em vídeo - RJ</h4>
+                  <i class="bi bi-mouse"></i>
+                  <span>clique para alterar</span>
+                </div>
+     
+                <div class="back_card">
+                  <ul class="description_ul">
+                    <li>Comando Básicos em JavaScript </li>
+                    <li>Repetições em JavaScript </li>
+                    <li>Condições em JavaScript </li>
+                    <li>Entendendo o DOM </li>
+                  </ul>
+                </div>
+            </div>
+            </div>
           </div>
+      
         </div>
-
         <div class="arrow-next">
           <a href="#section_project"><i class="bi bi-arrow-down-circle"></i></i></a>
         </div>
-
+      
       </section>
 
       <!-- SEÇÃO PROJECTS --------------------------->
       <section id="section_project" class="defaut_section">
 
         <div class="container_project defaut_flex_colum">
-          <h2>Atualizações ainda estão por vir</h2>
-          <p>Irei atualizar está seção com todos os meus projetos</p>
-        </div>
 
+          <div class="text-project">
+            <h2>Está seção ainda está em desenvolvendo</h2>
+            <h3>Pretendo colocar todos meus projetos que já realizei aqui dentro, para uma melhor vizualização</h3>
+            <h4>Fique de olho para novidades :D</h4>
+            <p>:D</p>
+          </div>
+
+        </div>
+          
         <div class="arrow-next">
           <a href="#section_introduction"><i class="bi bi-arrow-up-circle"></i></a>
         </div>

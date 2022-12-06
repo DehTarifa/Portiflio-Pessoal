@@ -19,6 +19,7 @@
   --color-base-dark-grey1: #242424;
   --color-base-dark-grey2: #201f1f;
   --color-base-blue-fundo: #338fd4;
+  --color-base-light: rgb(224, 221, 221);
 
   --backgraound-color1: linear-gradient(
     170deg,
@@ -27,6 +28,10 @@
   );
   --backgraound-color2: ;
   --backgraound-color3: ;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 main{
@@ -46,6 +51,7 @@ main{
   width: 100%;
   max-width: 45rem;
   border-bottom: 1px solid var(--text-color-grey);
+  visibility: hidden;
 }
 
 .defaut_flex_colum {
@@ -61,31 +67,31 @@ main{
   text-transform: uppercase;
   color: var(--text-color-blue);
   margin-bottom: 1rem;
+  visibility: hidden;
 }
 
 .arrow-next {
-  font-size: 2rem;
   position: absolute;
   right: 20px;
   bottom: 20px;
-  background-color: #c3c2c2;
-  padding: .4rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: .6s;
   width: 3rem;
   height: 3rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-base-dark-grey1);
-  transition: .6s;
+  border-radius: 100%;
+  background-color: var(--color-base-dark-grey1);
 }
 
 .arrow-next a i {
-  transition: .6s;
+  transition: all .6s;
   color: var(--text-color-blue);
+  font-size: 2.5rem;
 }
 
-.arrow-next a i:hover {
+.arrow-next:hover a i {
   color: var(--text-color-white);
 }
 
@@ -103,18 +109,18 @@ header {
   width: 100%;
   max-width: 30rem;
   margin: auto;
-  height: 4rem;
+  height: 3.5rem;
   background: var(--color-base-dark-grey2);
 }
 
 .header_dropdown_menu::before {
   content: '';
   position: absolute;
-  top: 25px;
+  top: 26px;
   right: 28px;
   width: 12px;
   height: 2px;
-  background-color: var(--text-color-white);
+  background-color: var(--text-color-grey);
   z-index: 10;
   transform: rotate(40deg);
   transition: 0.5s;
@@ -127,11 +133,11 @@ header {
 .header_dropdown_menu::after {
   content: '';
   position: absolute;
-  top: 25px;
+  top: 26px;
   right: 20px;
   width: 12px;
   height: 2px;
-  background-color: var(--text-color-white);
+  background-color: var(--text-color-grey);
   z-index: 10;
   transform: rotate(-40deg);
   transition: 0.5s;
@@ -172,32 +178,23 @@ header {
   opacity: 1;
 }
 
-.nav_dropdown_option ul {
-  padding: 1rem 1rem 1rem 0rem;
-  cursor: pointer;
+.nav_dropdown_option {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
-.nav_dropdown_option ul li a {
+.nav_dropdown_option a {
   text-decoration: none;
-  font-size: 14pt;
   color: var(--text-color-grey);
-}
-
-.nav_dropdown_option ul li span i {
   font-size: 14pt;
-  color: var(--text-color-grey);
-  margin-right: 10px;
+  padding: 1rem 2.5rem;
+  margin-bottom: 2px;
 }
 
-.nav_dropdown_option ul li {
-  padding: 1rem 1rem;
-}
-
-.nav_dropdown_option ul li:hover {
-  background: var(--text-color-blue);
+.nav_dropdown_option a:hover {
+  transition: all 0.5s;
+  background-color: #338fd4;
+  color: var(--text-color-white);
 }
 
 /* SECTION INTRODUCTION  ---------------------------------*/
@@ -273,13 +270,17 @@ header {
 }
 
 .container-aboutme .p-active {
-  transition: .6s;
+  transition: all .6s;
+  transform: scale(1.2);
   background: var(--backgraound-color1);
   color: var(--text-color-white);
+
 }
 
 .container-aboutme button {
   background: transparent;
+  width: 30px;
+  margin: 0 auto;
   border: none;
   margin-top: 3rem;
   cursor: pointer;
@@ -550,3 +551,22 @@ header {
   transition: .6s;
   transform: scale(1.2);
 }
+
+/* SECTION LIGHT MODE  ---------------------------------*/
+
+main.lightmode{
+  background: var(--color-base-light);
+}
+
+main.lightmode h2,
+main.lightmode h3,
+main.lightmode h4,
+main.lightmode p,
+main.lightmode span {
+  color: var(--color-base-dark-grey1);
+}
+
+
+
+
+

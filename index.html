@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media.css" />
 
+    <!-- SCROLL REVEL -------------------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <!-- BOOTSTRAP ICON ------------------------>
     <link
       rel="stylesheet"
@@ -30,42 +33,44 @@
 
         <!-- OPTION DROPDOWN MENU ----------------------------->
         <nav class="nav_dropdown_option">
-          <ul>
-            <li onmouseover="show('Introdução')">
-              <span><i class="bi bi-tags"></i></span>
-              <a href="#section_introduction">Introdução</a>
-            </li>
 
-            <li onmouseover="show('Sobre mim')">
-              <span><i class="bi bi-person"></i></span>
-              <a href="#section_aboutme">Sobre mim</a>
-            </li>
+          <!-- LINKS DE SECTION -->
+          
+          <a href="#section_introduction" onmouseover="show('Introdução')">
+            <i class="bi bi-tags"></i>
+            Introdução
+          </a>
 
-            <li onmouseover="show('Informações pessoais')">
-              <span><i class="bi bi-cup-hot"></i></span>
-              <a href="#section_info">Informações pessoais</a>
-            </li>
+          <a href="#section_aboutme" onmouseover="show('Sobre mim')">
+            <i class="bi bi-person"></i> 
+            Sobre mim
+          </a>
 
-            <li onmouseover="show('Experiência profissional')">
-              <span><i class="bi bi-briefcase"></i></span>
-              <a href="#section_experience">Experiência profissional</a>
-            </li>
+          <a href="#section_info" onmouseover="show('Informações Pessoais')">
+            <i class="bi bi-cup-hot"></i>
+            Informações Pessoais
+          </a>
 
-            <li onmouseover="show('Formação acadêmica')">
-              <span><i class="bi bi-mortarboard"></i></span>
-              <a href="#section_academic">Formação acadêmica</a>
-            </li>
+          <a href="#section_experience" onmouseover="show('Experiência profissional')">
+            <i class="bi bi-briefcase"></i>
+            Experiência profissional
+          </a>
 
-            <li onmouseover="show('Projetos pessoais')">
-              <span><i class="bi bi-mortarboard"></i></span>
-              <a href="#section_project">Projetos pessoais</a>
-            </li>
+          <a href="#section_academic" onmouseover="show('Formação acadêmica')">
+            <i class="bi bi-mortarboard"></i>
+            Formação Acadêmica
+          </a>
 
-            <li onmouseover="show('Contato')">
-              <span><i class="bi bi-phone"></i></span>
-              <a href="#section-contact">Contato</a>
-            </li>
-          </ul>
+          <a href="#section_project" onmouseover="show('Projetos pessoais')">
+            <i class="bi bi-mortarboard"></i>
+            Projetos Pessoais
+          </a>
+
+          <a href="#section-contact" onmouseover="show('Contato')">
+            <i class="bi bi-phone"></i>
+            Contato
+          </a>
+
         </nav>
       </div>
     </header>
@@ -108,7 +113,7 @@
         <div class="container-aboutme defaut_flex_colum">
           <h2>Sobre mim</h2>
           <h3>Carta de apresentação</h3>
-          <p class="content_aboutme_p">
+          <p class="content_aboutme_p ">
             Prezados Senhores (a).
             <br /><br />
             Meu nome é Denner Tarifa Ribeiro, tenho 23 anos, sou estudante do
@@ -348,7 +353,7 @@
       
         </div>
         <div class="arrow-next">
-          <a href="#section_project"><i class="bi bi-arrow-down-circle"></i></i></a>
+          <a href="#section_project"><i class="bi bi-arrow-down-circle"></i></a>
         </div>
       
       </section>
@@ -366,12 +371,11 @@
           </div>
 
         </div>
-          
+
         <div class="arrow-next">
           <a href="#section_introduction"><i class="bi bi-arrow-up-circle"></i></a>
         </div>
-
-
+          
       </section>
     </main>
 

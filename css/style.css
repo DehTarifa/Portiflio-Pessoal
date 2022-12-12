@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  color: var(--text-color-grey);
 }
 
 /* VARIABLES ---------------------------------*/
@@ -23,10 +24,14 @@
 
   --backgraound-color1: linear-gradient(
     170deg,
-    rgba(33, 94, 145, 1) 0%,
-    rgba(22, 140, 237, 1) 100%
+    rgb(33, 94, 145) 0%,
+    rgb(22, 140, 237) 100%
   );
-  --backgraound-color2: ;
+  --backgraound-color2: linear-gradient(
+    180deg, 
+    rgba(131,195,250,1) 0%,
+    rgba(0,60,110,1) 100%
+    );
   --backgraound-color3: ;
 }
 
@@ -65,9 +70,11 @@ main{
 .title_section {
   font-size: 1.8rem;
   text-transform: uppercase;
-  color: var(--text-color-blue);
   margin-bottom: 1rem;
   visibility: hidden;
+  background: var(--backgraound-color1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .arrow-next {
@@ -207,31 +214,32 @@ header {
   justify-content: end;
 }
 
-.container_introduction h1 {
-  font-size: 8rem;
+.introduction_text h1 {
+  font-size: 9rem;
   font-weight: 900;
-  color: var(--text-color-blue);
+  line-height: 7rem;
+  background: var(--backgraound-color1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.container_introduction h2 {
+.introduction_text h2 {
   font-size: 1.8rem;
   font-weight: 400;
   color: var(--text-color-grey);
-  margin-top: -1.3rem;
-  margin-bottom: 3rem;
 }
 
-.container_introduction p {
+.introduction_text blockquote {
   max-width: 30rem;
   margin: 0 auto;
-  margin-bottom: 3rem;
   color: var(--text-color-grey);
-  line-height: 25px;
+  line-height: 1.2rem;
+  padding: 3rem 1rem;
 }
 
-.container_introduction img {
-  width: 90%;
-  max-width: 25rem;
+.introduction_img img {
+  width: 100%;
+  max-width: 30rem;
   margin: 0 auto;
 }
 
@@ -248,54 +256,57 @@ header {
   justify-content: center;
 }
 
-.container-aboutme h2 {
+.aboutme_text h2 {
   color: var(--text-color-blue);
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: 800;
-
 }
 
-.container-aboutme h3 {
+.aboutme_text h3 {
   color: var(--text-color-grey);
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1.2rem;
-  margin-bottom: 3rem;
 }
 
-.container-aboutme p {
+.aboutme_text blockquote {
   color: var(--text-color-grey);
   text-align: justify;
-  padding: 1.5rem 2rem;
+  padding: 3rem 2rem;
   max-width: 30rem;
   margin: 0 auto;
-  transition: .6s;
+  transition: all .6s;
 }
 
-.container-aboutme .p-active {
+.aboutme_text .p-active {
   transition: all .6s;
-  transform: scale(1.2);
+  transform: scale(1.05);
   background: var(--backgraound-color1);
   color: var(--text-color-white);
-
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 3rem 2rem;
 }
 
-.container-aboutme button {
+.aboutme_itens {
+  display: none;
+}
+
+.aboutme_itens button {
   background: transparent;
   width: 30px;
   margin: 0 auto;
   border: none;
-  margin-top: 3rem;
   cursor: pointer;
 }
 
-.container-aboutme i {
+.aboutme_itens i {
   color: var(--text-color-grey);
   font-size: 2rem;
 }
 
-.container-aboutme span {
+.aboutme_itens span {
   color: var(--text-color-grey);
   text-transform: uppercase;
   font-size: 0.6rem;

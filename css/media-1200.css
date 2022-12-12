@@ -1,0 +1,96 @@
+@media screen and (min-width: 1200px) {
+  .defaut_section{
+    max-width: 80rem;
+  }
+
+  /* SECTION INTRODUCTION  ---------------------------------*/
+
+  .container_introduction {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .introduction_text{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .introduction_text h1{
+    font-size: 12rem;
+    line-height: 10rem;
+  }
+
+  .introduction_text h2{
+    font-size: 2.3rem;
+  }
+
+  .introduction_text blockquote{
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  .introduction_img{
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .introduction_img img{
+    height: 100%;
+    max-height: 40rem;
+    max-width: 40rem;
+  }
+
+  /* SECTION ABOUT ME  ---------------------------------*/
+
+  #section_aboutme {
+    background: transparent;
+  }
+
+  #aboutme-img {
+    width: 36rem;
+    height: 36rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url(/img/Perfil.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50rem;
+  }
+
+  .container-aboutme {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .aboutme_text {
+    width: 100%;
+    max-width: 35rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .aboutme_text h2 {
+    font-size: 3rem;
+  }
+
+  .aboutme_text h3 {
+    font-size: 1.8rem;
+  }
+
+  .aboutme_text blockquote {
+    font-size: 1.1rem;
+    padding: 3rem 0rem;
+  }
+
+  .aboutme_itens {
+    display: contents;
+  }
+
+}

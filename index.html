@@ -8,7 +8,7 @@
     <!-- LINKS CSS ----------------------------->
 
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/media-1200.css" />
 
     <!-- SCROLL REVEL -------------------------->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -77,25 +77,28 @@
 
     <main>
 
-      <!-- SECÇÃO INTRODUCTION ------------------------>
+      <!-- SECTION INTRODUCTION ------------------------>
 
       <section id="section_introduction" class="defaut_section">
 
         <div class="container_introduction defaut_flex_colum">
+          
+          <!-- content-01 --------------->
           <div class="introduction_text">
             <h1>Olá</h1>
             <h2>Meu nome é Denner</h2>
-            <p>
+            <blockquote>
               Este é meu portfólio pessoal, onde apresento algumas informações
               sobre mim, experiência profissional e acadêmica, também comento um
-              pouco sobre meus projetos e conhecimentos
-            </p>
+              pouco sobre meus projetos e conhecimentos.
+            </blockquote>
           </div>
           
+          <!-- content-02 --------------->
           <div class="introduction_img">
             <img
             src="img/introduction-person.png"
-            alt="imagem de uma pessoa 3D"
+            alt="imagem de uma garoto em 3D"
             />
           </div>
         </div>
@@ -106,30 +109,40 @@
 
       </section>
 
-      <!-- SEÇÃO ABOUT ME --------------------------->
+      <!-- SECTION ABOUT ME --------------------------->
 
       <section id="section_aboutme" class="defaut_section">
 
         <div class="container-aboutme defaut_flex_colum">
-          <h2>Sobre mim</h2>
-          <h3>Carta de apresentação</h3>
-          <p class="content_aboutme_p ">
-            Prezados Senhores (a).
-            <br /><br />
-            Meu nome é Denner Tarifa Ribeiro, tenho 23 anos, sou estudante do
-            curso de Análise e Desenvolvimento de sistemas, onde procuro
-            oportunidades para iniciar a minha carreira profissional na área de
-            TI, afim de aprender e desenvolver minhas habilidades profissionais
-            e pessoais. Estou me desenvolvendo nas linguagens JavaScript,
-            nodejs, sql, mas sou flexível para aprender, trabalho bem em equipe
-            e sempre busco por melhores resultados.
-          </p>
 
-          <button onclick="openVisual()"><i class="bi bi-mouse"></i></button>
+          <!-- content-01/01 --------------->
+          <div class="aboutme_text">
 
-          <span>Clique para mudar</span>
+            <h2>Sobre mim</h2>
+            <h3>Carta de apresentação</h3>
+            <blockquote class="content_aboutme_p">
+              Prezados Senhores (a).
+              <br /><br />
+              Meu nome é Denner Tarifa Ribeiro, tenho 23 anos, sou estudante do
+              curso de Análise e Desenvolvimento de sistemas, onde procuro
+              oportunidades para iniciar a minha carreira profissional na área de
+              TI, afim de aprender e desenvolver minhas habilidades profissionais
+              e pessoais. Estou me desenvolvendo nas linguagens JavaScript,
+              nodejs, sql, mas sou flexível para aprender, trabalho bem em equipe
+              e sempre busco por melhores resultados.
+            </blockquote>
 
-          <div class="content-divider"></div>
+            <!-- content-01/02 --------------->
+            <div class="aboutme_itens defaut_flex_colum">
+              <button onclick="openVisual()"><i class="bi bi-mouse"></i></button>
+              <span>Clique para mudar</span>
+              <div class="content-divider"></div>
+            </div>
+
+          </div>
+
+          <!-- content-03 --------------->
+          <div id="aboutme-img"></div>
 
         </div>
 

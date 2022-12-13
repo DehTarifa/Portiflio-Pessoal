@@ -32,7 +32,11 @@
     rgba(131,195,250,1) 0%,
     rgba(0,60,110,1) 100%
     );
-  --backgraound-color3: ;
+  --backgraound-color3: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1),
+  );
 }
 
 html{
@@ -282,7 +286,11 @@ header {
 .aboutme_text .p-active {
   transition: all .6s;
   transform: scale(1.05);
-  background: var(--backgraound-color1);
+  background: var(--backgraound-color3);
+  backdrop-filter: blur(21px);
+  -webkit-backdrop-filter: blur(21px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.836);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   color: var(--text-color-white);
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -362,7 +370,6 @@ header {
 
 .skill_card:hover {
   transform: scale(1.2);
-  color: var(--text-color-blue);
 }
 
 .skill_card i {

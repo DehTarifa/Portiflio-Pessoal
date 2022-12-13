@@ -58,6 +58,7 @@
     background-position: center;
     background-size: cover;
     border-radius: 50rem;
+    border: 5px solid var( --text-color-blue);
   }
 
   .container-aboutme {

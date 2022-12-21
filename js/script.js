@@ -1,5 +1,5 @@
 // FUNCTION DROPDOWN MENU -------------------------*
-
+/* 
 function show(a) {
   document.querySelector('.input_dropdown_menu').value = a
 }
@@ -8,6 +8,8 @@ let dropdown = document.querySelector('.header_dropdown_menu')
   dropdown.onclick = function () {
   dropdown.classList.toggle('active')
 }
+
+*/
 
 // STYLE P ABOUT ME -----------------------------------*
 
@@ -90,3 +92,13 @@ class SlideStories {
 }
 
 new SlideStories('slide');
+
+// OPEN MODAL
+
+const button_openmodal = document.getElementById('button_openmodal')
+button_openmodal.addEventListener('click', headerOpenModal)
+
+function headerOpenModal() {
+  const  header_modal = document.getElementById('header_modal')
+  header_modal.classList.toggle('active')
+}

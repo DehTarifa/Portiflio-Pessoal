@@ -22,20 +22,25 @@
 
   <body>
     <header>
-      <!-- HEADER DROPDOWN MENU ----------------------------->
-      <div class="header_dropdown_menu">
-        <input
-          type="text"
-          class="input_dropdown_menu"
-          readonly
-          placeholder="Escolha uma seção"
-        />
+      <!-- TOP BAR ------------------------>
+      <section id="header_topbar">
 
-        <!-- OPTION DROPDOWN MENU ----------------------------->
-        <nav class="nav_dropdown_option">
+        <button id="button_openmodal">
+          <i class="bi bi-list"></i>
+        </button>
 
-          <!-- LINKS DE SECTION -->
-          
+      </section>
+
+      <section id="header_modal" >
+      <!-- MODAL OPTION------------------------>
+       <div id="nav_option">
+
+          <input 
+            type="text" 
+            placeholder="Escolha uma seção"
+            id="input_dropdown_menu">
+
+         
           <a href="#section_introduction" onmouseover="show('Introdução')">
             <i class="bi bi-tags"></i>
             Introdução
@@ -71,29 +76,51 @@
             Contato
           </a>
 
-        </nav>
-      </div>
+       </div> 
+
+       <div id="content_language">
+        <button id="button_PT">
+          <img src="icon/brasil.png" alt="">
+        </button>
+
+        <button id="button_EN">
+          <img src="icon/estados-unidos.png" alt="">
+        </button>
+
+        <button id="button_ES">
+          <img src="icon/portugal.png" alt="">
+        </button>
+       </div>
+
+       <div id="content_switch">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+       </div>
+
+      </section>
+      
     </header>
 
     <main>
 
       <!-- SECTION INTRODUCTION ------------------------>
-
       <section id="section_introduction" class="defaut_section">
         <div class="container_introduction defaut_flex_colum">
           
-          <!-- content-01 --------------->
-          <div class="introduction_text">
-            <h1>Olá</h1>
-            <h2>Meu nome é Denner</h2>
-            <blockquote>
-              Este é meu portfólio pessoal, onde apresento algumas informações
-              sobre mim, experiência profissional e acadêmica, também comento um
-              pouco sobre meus projetos e conhecimentos.
-            </blockquote>
+          <!-- CONTENT-01 --------------->
+           <div class="introduction_text">
+              <h1>Olá</h1>
+              <h2>Meu nome é Denner</h2>
+              <blockquote>
+                Este é meu portfólio pessoal, onde apresento algumas informações
+                sobre mim, experiência profissional e acadêmica, também comento um
+                pouco sobre meus projetos e conhecimentos.
+              </blockquote>
           </div>
           
-          <!-- content-02 --------------->
+          <!-- CONTENT-02 --------------->
           <div class="introduction_img">
             <img
             src="img/introduction-person.png"
@@ -103,23 +130,23 @@
         </div>
 
         <div class="arrow-next">
-          <a href="#section_aboutme"><i class="bi bi-arrow-down-circle"></i></a>
+          <a href="#section_aboutme">
+            <i class="bi bi-arrow-down-circle"></i>
+          </a>
         </div>
 
       </section>
 
-      <!-- SECTION ABOUT ME --------------------------->
-
+      <!-- SECTION ABOUT ME ---------------------------->
       <section id="section_aboutme" class="defaut_section">
-
         <div class="container-aboutme defaut_flex_colum">
 
-          <!-- content-01/01 --------------->
+          <!-- CONTENT-01/01 --------------->
           <div class="aboutme_text">
 
             <h2>Sobre mim</h2>
             <h3>Carta de apresentação</h3>
-            <blockquote class="content_aboutme_p">
+            <blockquote class="content_aboutme">
               Prezados Senhores (a).
               <br /><br />
               Meu nome é Denner Tarifa Ribeiro, tenho 23 anos, sou estudante do
@@ -131,16 +158,20 @@
               e sempre busco por melhores resultados.
             </blockquote>
 
-            <!-- content-01/02 --------------->
+            <!-- CONTENT-01/02 --------------->
             <div class="aboutme_itens defaut_flex_colum">
-              <button onclick="openVisual()"><i class="bi bi-mouse"></i></button>
+
+              <button onclick="openVisual()">
+                <i class="bi bi-mouse"></i>
+              </button>
               <span>Clique para mudar</span>
               <div class="content-divider"></div>
+
             </div>
 
           </div>
 
-          <!-- content-03 --------------->
+          <!-- CONTENT-02 --------------->
           <div id="aboutme-img"></div>
 
         </div>
@@ -159,16 +190,28 @@
           <h2 class="title_section">Informações Pessoais</h2>
           <div class="card-information">
             <ul>
-              <li>Nascimento: 17/08/1999 - 23 anos</li>
-              <li>Localização: Mogi das cruzes - SP</li>
-              <li>Escolaridade: Ensino Superior Cursando</li>
-              <li>Curso: Análise e Desenvolvimento de Sistemas</li>
+              <li>
+                <strong>Nascimento: </strong>
+                17/08/1999 - 23 anos
+              </li>
+              <li>
+                <strong>Localização: </strong> 
+                Mogi das cruzes - São Paulo
+              </li>
+              <li>
+                <strong>Escolaridade: </strong> 
+                Ensino Superior Cursando
+              </li>
+              <li>
+                <strong>Curso: </strong>
+                Análise e Desenvolvimento de Sistemas
+              </li>
             </ul>
           </div>
 
           <!-- PERSONAL SKILL -->
           <h2 class="title_section">habilidades</h2>
-          <ul>
+          <ul class="card-skill">
             <li>Flexível</li>
             <li>Organizado</li>
             <li>Criativo</li>
@@ -176,23 +219,33 @@
           </ul>
 
           <!-- CARD SKILL -->
-          <div class="container_skill">
-            <div class="skill_card">
-              <i class="bi bi-filetype-html"></i>
-              <span>62%</span>
+          <div class="technologies">
+
+            <div class="progress">
+              <img src="icon/iconhtml.png" alt="imagem HTML">
+              <div class="progress_bar">
+                <div class="progress_barvalue skill1"></div>
+              </div>
+              65%
             </div>
 
-            <div class="skill_card">
-              <i class="bi bi-filetype-css"></i>
-              <span>53%</span>
+            <div class="progress">
+              <img src="icon/iconcss.png" alt="imagem HTML">
+              <div class="progress_bar">
+                <div class="progress_barvalue skill2"></div>
+              </div>
+              56%
             </div>
 
-            <div class="skill_card">
-              <i class="bi bi-filetype-js"></i>
-              <span>27%</span>
+            <div class="progress">
+              <img src="icon/iconjs.png" alt="imagem HTML">
+              <div class="progress_bar">
+                <div class="progress_barvalue skill3"></div>
+              </div>
+              32%
             </div>
+
           </div>
-        </div>
 
         <div class="arrow-next">
           <a href="#section_experience"><i class="bi bi-arrow-down-circle"></i></a>
@@ -410,9 +463,6 @@
 
           </div>
 
-        <div class="arrow-next">
-          <a href="#section_introduction"><i class="bi bi-arrow-up-circle"></i></a>
-        </div>
           
       </section>
     </main>

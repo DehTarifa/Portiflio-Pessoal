@@ -37,6 +37,15 @@
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.1),
   );
+
+  /* COLORS DARK MODE ----------------------------*/
+  --color-dark-text01: rgb(255, 255, 255);
+  --color-dark-text02: rgba(255, 255, 255, 0.8);
+  --color-dark-text03: rgb(51, 143, 212);
+
+  --color-dark-backgraund01: rgb(36, 36, 36);
+  --color-dark-backgraund02: rgb(32, 31, 31);
+  --color-dark-backgraund03: rgb(51, 143, 212);
 }
 
 html{
@@ -59,8 +68,8 @@ main{
   height: 100vh;
   width: 100%;
   max-width: 45rem;
-  border-bottom: 1px solid var(--text-color-grey);
-
+  visibility: hidden;
+  border-bottom: 1px solid var(--color-dark-text02);
 }
 
 .defaut_flex_colum {
@@ -108,11 +117,6 @@ main{
 
 /* MENU HEADER DROPDOWN
 ---------------------------------------------------*/
-header{
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-}
 
 #header_topbar {
   background-color: var(--color-base-dark-grey2);
@@ -120,6 +124,9 @@ header{
   padding: .3rem 1rem;
   display: flex;
   justify-content: end;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 }
 
 #button_openmodal {
@@ -129,15 +136,20 @@ header{
   font-size: 25pt;
 }
 
+/* NAV OPTION -----------*/
 
 #header_modal{
   background: var(--color-base-dark-grey2);
   width: 100%;
   max-width: 21rem;
   height: 95vh;
-  padding: 1rem;
+  padding: 2rem;
   transform: translateX(-21rem);
   transition: all .6s ease;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  margin-top: 3rem;
 }
 
 #header_modal.active{
@@ -151,10 +163,129 @@ header{
 }
 
 #nav_option a {
-  background-color: var(--color-base-blue-fundo);
   padding: 1rem;
-  font-size: 15pt;
+  font-size: 13pt;
+  text-decoration: none;
+  transition: all .6s ease;
+  border-radius: 5px;
 }
+
+#nav_option i {
+  margin-right: .6rem;
+}
+
+#nav_option a:hover {
+  background-color: var(--color-base-blue-fundo);
+  transform: translateX(15px);
+  color: #fff;
+}
+
+#nav_option input {
+  padding: 1rem;
+  font-size: 13pt;
+  outline: none;
+  background-color: #201f1f;
+  border: none;
+  border-bottom: 1px solid var(--text-color-grey);
+}
+
+/* HEADER LANGUAGE -----------*/
+
+#content_language {
+  
+  display: flex;
+  justify-content: space-around;
+  width: 130px;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+#content_language button {
+  background-color: transparent;
+  border: none;
+  opacity: .6;
+}
+
+#content_language button img {
+  width: 40px;
+}
+
+#content_switch {
+  width: 120px;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+/* STITCH-----------*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 34px;
+ }
+ 
+ .switch input {
+  display: none;
+ }
+ 
+ .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3C3C3C;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+ }
+ 
+ .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+ }
+ 
+ input:checked + .slider {
+  background-color: #0E6EB8;
+ }
+ 
+ input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+ }
+ 
+ input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(85px);
+ }
+ 
+ /*------ ADDED CSS ---------*/
+ .slider:after {
+  content: 'Dark Mode';
+  color: white;
+  display: block;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+ }
+ 
+ input:checked + .slider:after {
+  content: 'Light Mode';
+ }
+ 
 
 /* SECTION INTRODUCTION  ---------------------------------*/
 
@@ -163,9 +294,9 @@ header{
 }
 
 .introduction_text h1 {
-  font-size: 9rem;
+  font-size: 8rem;
   font-weight: 900;
-  line-height: 7rem;
+  line-height: 6rem;
   background: var(--backgraound-color1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -174,15 +305,16 @@ header{
 .introduction_text h2 {
   font-size: 1.8rem;
   font-weight: 400;
-  color: var(--text-color-grey);
+  color: var(--color-dark-text02);
 }
 
 .introduction_text blockquote {
   max-width: 30rem;
   margin: 0 auto;
-  color: var(--text-color-grey);
-  line-height: 1.2rem;
+  color: var(--color-dark-text02);
+  line-height: 1.4rem;
   padding: 3rem 1rem;
+  text-align: justify;
 }
 
 .introduction_img img {
@@ -191,44 +323,44 @@ header{
   margin: 0 auto;
 }
 
-/* SECTION ABOUT ME  ---------------------------------*/
+/* SECTION ABOUT ME  ------------------------------------*/
 
 #section_aboutme {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 6)),
-    url(/img/Perfil.jpg);
+  url(/img/Perfil.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .container-aboutme{
   justify-content: center;
-  text-align: justify;
 }
 
 .aboutme_text h2 {
-  color: var(--text-color-blue);
+  color: var(--color-dark-text03);
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: 800;
+  line-height: 2rem;
 }
 
 .aboutme_text h3 {
-  color: var(--text-color-grey);
+  color: var(--color-dark-text02);
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
-.aboutme_text blockquote {
-  color: var(--text-color-grey);
+.content_aboutme {
+  color: var(--color-dark-text02);
   text-align: justify;
   padding: 3rem 2rem;
   max-width: 30rem;
   margin: 0 auto;
-  transition: all .6s;
+  transition: all .6s ease;
 }
 
-.aboutme_text .p-active {
+.content_aboutme.active {
   transition: all .6s;
   transform: scale(1.05);
   background: var(--backgraound-color3);
@@ -236,7 +368,7 @@ header{
   -webkit-backdrop-filter: blur(21px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.836);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  color: var(--text-color-white);
+  color: var(--color-dark-text01);
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   padding: 3rem 2rem;
@@ -273,53 +405,81 @@ header{
   margin-top: .8rem;
 }
 
-/* SECTION INFORMATION / SKILL  ---------------------------------*/
+/* SECTION INFORMATION / SKILL  -----------------------------*/
 
 .container_info {
   justify-content: center;
 }
 
-.container_info ul {
-  padding: 2rem 4rem;
+.card-information ul{
   text-align: left;
-  width: 100%;
-  max-width: 22rem;
-  margin: 0 auto;
-}
-
-.container_info ul li {
-  color: var(--text-color-grey);
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.card-information ul {
-  list-style: none;
-  padding: 2rem 1rem;
-}
-
-.container_skill {
-  display: flex;
-  justify-content: space-around;
   width: 100%;
   max-width: 26rem;
   margin: 0 auto;
+  list-style: none;
+  padding: 2rem 1em;
 }
 
-.skill_card {
+.card-information ul li {
+  color: var(--color-dark-text02);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card-skill {
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  max-width: 15rem;
+  margin-bottom: 5rem;
+}
+
+/* INFO PROGRESS -----*/
+
+.technologies{
   display: flex;
   flex-direction: column;
-  color: var(--text-color-grey);
-  transition: 0.5s;
 }
 
-.skill_card:hover {
-  transform: scale(1.2);
+.progress{
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  width: 22rem;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
-.skill_card i {
-  font-size: 5.5rem;
+.progress img{
+  width: 4rem;
 }
+
+.progress_bar{
+  width: 100%;
+  height: .8rem;
+  background: var(--text-color-grey);
+  border-radius: 10px;
+  opacity: .9;
+}
+
+.progress_barvalue{
+  height: .8rem;
+  background: var(--color-dark-backgraund03);
+  border-radius: 10px;
+}
+
+.skill1{
+  width: 65%;
+}
+
+.skill2{
+  width: 56%;
+}
+
+.skill3{
+  width: 32%;
+}
+
 
 /* SECTION EXPERIENCIE / ACADEMIC  ---------------------------------*/
 

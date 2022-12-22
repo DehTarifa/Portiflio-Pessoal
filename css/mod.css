@@ -35,6 +35,12 @@ body{
   border-bottom: 1px solid var(--color-backgraund04);
 }
 
+.presentation_title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--color-text-03);
+}
+
 /* VARIABLES ---------------------------------*/
 
 :root{
@@ -51,6 +57,7 @@ body{
   --color-backgraund05: rgb(255, 255, 255);
   --color-backgraund06: rgb(228, 233, 247);
   --color-backgraund07: rgb(246, 245, 255);
+  --color-backgraund07: rgb(232, 232, 232);
 
 }
 
@@ -62,10 +69,13 @@ body{
 }
 
 #button_openmodal {
-  font-size: 1.3rem;
   border: none;
   background: transparent;
-  background-color: red;
+}
+
+#button_openmodal i {
+  font-size: 2.4rem;
+  cursor: pointer;
 }
 
 /*-------------------------------------*/
@@ -148,14 +158,14 @@ body{
 
 #introduction_text h1{
   font-size: 15rem;
-  line-height: 14rem;
+  line-height: 13rem;
   font-weight: 900;
   color: var(--color-text-03);
 }
 
 #introduction_text h2{
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--color-text-02);
 }
 
@@ -171,4 +181,148 @@ body{
   max-width: 37.5rem;
 }
 
+/* SECTION ABOUT ME  ------------------------------*/
 
+#aboutMe_text {
+  width: 100%;
+  max-width: 37.5rem;
+  text-align: justify;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), 
+  -15px -15px 30px rgb(60, 60, 60);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+#aboutMe_text h3 {
+  font-size: 1.5rem;
+  margin-top: -.5rem;
+  font-weight: 300;
+}
+
+#aboutMe_blockquote {
+  margin: 2rem 0rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-weight: 300;
+  transition: all .6s ease-in;
+}
+
+#aboutMe_blockquote.activeBlockquote {
+  background-color: rgba(240, 240, 240, 0.774);
+  color: var(--color-text-04);
+  transform: scale(1.1);
+}
+
+/*-----------------------------*/
+
+#aboutMe_itens {
+  text-align: center;
+}
+
+#aboutMe_itens button {
+  width: 20px;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#aboutMe_itens button i {
+  font-size: 1.8rem;
+}
+
+#aboutMe_itens h5{
+  font-size: .8rem;
+  font-weight: 200;
+  margin-bottom: .5rem;
+}
+
+.share_content01{
+  height: 1px;
+  width: 20rem;
+  margin: 0 auto;
+  background: var(--color-backgraund03);
+}
+
+/*-----------------------------*/
+
+#aboutMe_img {
+  background-image: url(/img/Perfil.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 36rem;
+  height: 35rem;
+  opacity: .5;
+  border-radius: 50rem;
+}
+
+/* SECTION INFORMATION AND SKILLS ------------------*/
+
+#container_infoAndSkills { 
+  flex-direction: column;
+}
+
+#container_infoAndSkills h3 { 
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: .6rem;
+}
+
+#content_information {
+  margin-top: 1rem;
+}
+
+#content_information ul li {
+  margin: .5rem 0rem;
+  width: 30rem;
+  border-radius: 10px;
+}
+
+#content_personalSkills {
+  margin: 2rem 0rem;
+}
+
+#content_personalSkills ul li {
+  list-style: disc;
+  margin-left: 5rem;
+}
+
+/*-----------------------------*/
+
+.card_technology {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card_technology img {
+  width: 4.2rem;
+}
+
+.progress_bar {
+  width: 20rem;
+  height: 13px;
+  background-color: rgba(221, 221, 221, 0.582);
+  border-radius: 20px;
+}
+
+.progress_value {
+  height: 13px;
+  background-color: var(--color-backgraund03);
+  border-radius: 20px;
+}
+
+.valhtml {
+  width: 65%;
+}
+
+.valcss {
+  width: 53%;
+}
+
+.valjs {
+  width: 32%;
+}

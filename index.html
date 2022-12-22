@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porfiólio Denner Tarifa</title>
-    <!-- LINKS CSS ----------------------------->
 
+    <!-- LINKS CSS ----------------------------->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media-1200.css" />
 
@@ -78,22 +78,27 @@
 
        </div> 
 
+       <h3>Selecione um idioma</h3>
+
        <div id="content_language">
-        <button id="button_PT">
+        
+        <button id="button_PT" class="button_language">
           <img src="icon/brasil.png" alt="">
         </button>
 
-        <button id="button_EN">
+        <button id="button_EN" class="button_language">
           <img src="icon/estados-unidos.png" alt="">
         </button>
 
-        <button id="button_ES">
+        <button id="button_ES" class="button_language">
           <img src="icon/portugal.png" alt="">
         </button>
        </div>
 
+       <h3>Mudar para modo Light</h3>
+
        <div id="content_switch">
-        <label class="switch">
+        <label id="button_switch" class="switch">
           <input type="checkbox">
           <span class="slider"></span>
         </label>
@@ -103,7 +108,7 @@
       
     </header>
 
-    <main>
+    <main class="lightMode">
 
       <!-- SECTION INTRODUCTION ------------------------>
       <section id="section_introduction" class="defaut_section">
@@ -463,7 +468,6 @@
 
           </div>
 
-          
       </section>
     </main>
 

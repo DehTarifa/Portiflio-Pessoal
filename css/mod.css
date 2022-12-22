@@ -1,0 +1,174 @@
+/* FONTS GOOGLE POPPINS ----------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* RESET CSS ---------------------------------*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  background: var(--color-backgraund01);
+}
+
+.flex_colum{
+  display: flex;
+  flex-direction: column;
+}
+
+.default_container{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--color-backgraund04);
+}
+
+/* VARIABLES ---------------------------------*/
+
+:root{
+  --color-text-01:rgb(255, 255, 255);
+  --color-text-02: rgba(255, 255, 255, 0.8);
+  --color-text-03:rgb(51, 143, 212);
+  --color-text-04:rgb(36, 36, 36);
+  --color-text-05:rgb(189, 193, 197);
+
+  --color-backgraund01: rgb(36, 36, 36);
+  --color-backgraund02: rgb(32, 31, 31);
+  --color-backgraund03: rgb(51, 143, 212);
+  --color-backgraund04: rgb(189, 193, 197);
+  --color-backgraund05: rgb(255, 255, 255);
+  --color-backgraund06: rgb(228, 233, 247);
+  --color-backgraund07: rgb(246, 245, 255);
+
+}
+
+/* HEADER TOP BAR ------------------------------*/
+
+#header_topBar {
+  background: var(--color-backgraund02);
+  text-align: center;
+}
+
+#button_openmodal {
+  font-size: 1.3rem;
+  border: none;
+  background: transparent;
+  background-color: red;
+}
+
+/*-------------------------------------*/
+
+#header_modalSide {
+  width: 100%;
+  max-width: 25rem;
+  height: 100vh;
+  background: var(--color-backgraund02) ;
+  padding: 3rem 2rem;
+}
+
+#modalSide_option {
+  gap: .5rem;
+  margin-bottom: 4rem;
+}
+
+#modalSide_input {
+  font-size: 1.2rem;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-backgraund01);
+  color: var(--color-text-02);
+  opacity: .7;
+}
+
+#modalSide_option a {
+  font-size: 1.2rem;
+  padding: .6rem 2rem;
+  border-radius: 3px;
+  opacity: .6;
+  transition: all .6s ease;
+}
+
+#modalSide_option a:hover {
+  color: var(--color-text-01);
+  opacity: 1;
+  background: var(--color-backgraund03);
+  transform: translateX(20px);
+}
+
+/*-------------------------------------*/
+
+#modalSide_language h4,
+#modalSide_DarkOrLight h4 {
+  font-weight: 400;
+  opacity: .8;
+}
+
+.button_language {
+  background: transparent;
+  border: none;
+}
+
+.button_language img{
+  width: 40px;
+  margin-right: .3rem;
+  opacity: .6;
+  cursor: pointer;
+  transition: all .6s ease;
+}
+
+.button_language img:hover {
+  opacity: 1;
+  transform: translateY(-6px);
+}
+
+/* FALTA CRIAR O INPUT CHECK BOX
+-------------------------------------*/
+
+/* SECTION INTRODUCTION ------------------------------*/
+
+#introduction_text {
+  width: 100%;
+  max-width: 37.5rem;
+  text-align: center;
+}
+
+#introduction_text h1{
+  font-size: 15rem;
+  line-height: 14rem;
+  font-weight: 900;
+  color: var(--color-text-03);
+}
+
+#introduction_text h2{
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-text-02);
+}
+
+#introduction_text blockquote{
+  width: 30rem;
+  margin: 0 auto;
+  padding: 3rem 0rem;
+  text-align: justify;
+}
+
+#introduction_img img {
+  width: 100%;
+  max-width: 37.5rem;
+}
+
+

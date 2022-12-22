@@ -14,6 +14,9 @@ function headerOpenModal() {
 function show(a) {
   document.querySelector('#input_dropdown_menu').value = a
 }
+
+// DARK MODE 
+
 // STYLE P ABOUT ME -----------------------------------*
 
 function openVisual() {

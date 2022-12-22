@@ -59,7 +59,10 @@ main{
   background: var(--color-base-dark-grey1);
 }
 
-/* CLASS GLOBAL ---------------------------------*/
+/* CLASS STANDARDIZATION ---------------------------------*/
+
+
+
 
 .defaut_section{
   display: flex;
@@ -102,7 +105,6 @@ main{
   width: 3rem;
   height: 3rem;
   border-radius: 100%;
-  background-color: var(--color-base-dark-grey1);
 }
 
 .arrow-next a i {
@@ -200,10 +202,16 @@ main{
   margin-top: 3rem;
 }
 
-#content_language button {
+.button_language {
   background-color: transparent;
   border: none;
   opacity: .6;
+  cursor: pointer;
+  transition: all .6s ease;
+}
+
+.button_language:hover{
+  opacity: 1;
 }
 
 #content_language button img {
@@ -742,5 +750,3 @@ main{
 }
 
 /* SECTION LIGHT MODE  ---------------------------------*/
-
-
